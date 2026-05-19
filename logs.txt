@@ -1,0 +1,1413 @@
+
+==> Audit <==
+┌────────────┬───────────────────────────────────────────────────────────────────────────┬────────────────┬──────────┬─────────┬─────────────────────┬─────────────────────┐
+│  COMMAND   │                                   ARGS                                    │    PROFILE     │   USER   │ VERSION │     START TIME      │      END TIME       │
+├────────────┼───────────────────────────────────────────────────────────────────────────┼────────────────┼──────────┼─────────┼─────────────────────┼─────────────────────┤
+│ start      │                                                                           │ minikube       │ emmanuel │ v1.38.1 │ 05 May 26 08:09 UTC │ 05 May 26 08:15 UTC │
+│ service    │ frontend-service -n cyclopousse                                           │ minikube       │ emmanuel │ v1.38.1 │ 05 May 26 09:11 UTC │ 05 May 26 09:11 UTC │
+│ stop       │                                                                           │ minikube       │ emmanuel │ v1.38.1 │ 05 May 26 10:34 UTC │ 05 May 26 10:34 UTC │
+│ start      │                                                                           │ minikube       │ emmanuel │ v1.38.1 │ 05 May 26 13:00 UTC │ 05 May 26 13:05 UTC │
+│ service    │ frontend-service -n cyclopousse                                           │ minikube       │ emmanuel │ v1.38.1 │ 05 May 26 13:12 UTC │ 05 May 26 13:12 UTC │
+│ stop       │                                                                           │ minikube       │ emmanuel │ v1.38.1 │ 05 May 26 13:56 UTC │ 05 May 26 13:57 UTC │
+│ start      │                                                                           │ minikube       │ emmanuel │ v1.38.1 │ 09 May 26 09:42 UTC │ 09 May 26 09:47 UTC │
+│ service    │ frontend-service -n cyclopousse                                           │ minikube       │ emmanuel │ v1.38.1 │ 09 May 26 09:49 UTC │ 09 May 26 09:49 UTC │
+│ stop       │                                                                           │ minikube       │ emmanuel │ v1.38.1 │ 09 May 26 14:53 UTC │ 09 May 26 14:53 UTC │
+│ start      │                                                                           │ minikube       │ emmanuel │ v1.38.1 │ 10 May 26 09:06 UTC │ 10 May 26 09:10 UTC │
+│ delete     │                                                                           │ minikube       │ emmanuel │ v1.38.1 │ 10 May 26 10:30 UTC │ 10 May 26 10:31 UTC │
+│ start      │ --nodes 3 -p ha-cluster                                                   │ ha-cluster     │ emmanuel │ v1.38.1 │ 10 May 26 10:32 UTC │ 10 May 26 10:38 UTC │
+│ delete     │ --all                                                                     │ minikube       │ emmanuel │ v1.38.1 │ 10 May 26 13:23 UTC │ 10 May 26 13:23 UTC │
+│ start      │ --nodes=2 --cpus=2 --memory=2800 --driver=docker --profile=cyclopousse-ha │ cyclopousse-ha │ emmanuel │ v1.38.1 │ 10 May 26 13:23 UTC │ 10 May 26 13:27 UTC │
+│ docker-env │ -p cyclopousse-ha                                                         │ cyclopousse-ha │ emmanuel │ v1.38.1 │ 10 May 26 13:29 UTC │                     │
+│ docker-env │ -p cyclopousse-ha                                                         │ cyclopousse-ha │ emmanuel │ v1.38.1 │ 10 May 26 13:30 UTC │                     │
+│ addons     │ enable registry -p cyclopousse-ha                                         │ cyclopousse-ha │ emmanuel │ v1.38.1 │ 10 May 26 13:31 UTC │ 10 May 26 13:34 UTC │
+│ addons     │ enable metrics-server -p cyclopousse-ha                                   │ cyclopousse-ha │ emmanuel │ v1.38.1 │ 10 May 26 13:34 UTC │ 10 May 26 13:34 UTC │
+│ ip         │ cyclopousse-ha ip                                                         │ cyclopousse-ha │ emmanuel │ v1.38.1 │ 10 May 26 13:35 UTC │ 10 May 26 13:35 UTC │
+│ service    │ frontend-service -n cyclopousse -p cyclopousse-ha                         │ cyclopousse-ha │ emmanuel │ v1.38.1 │ 10 May 26 14:51 UTC │ 10 May 26 14:52 UTC │
+│ service    │ frontend-service -n cyclopousse -p cyclopousse-ha                         │ cyclopousse-ha │ emmanuel │ v1.38.1 │ 10 May 26 15:20 UTC │                     │
+│ service    │ frontend-service -n cyclopousse -p cyclopousse-ha                         │ cyclopousse-ha │ emmanuel │ v1.38.1 │ 10 May 26 15:24 UTC │                     │
+│ service    │ frontend-service -n cyclopousse -p cyclopousse-ha                         │ cyclopousse-ha │ emmanuel │ v1.38.1 │ 10 May 26 15:36 UTC │ 10 May 26 15:36 UTC │
+│ stop       │                                                                           │ minikube       │ emmanuel │ v1.38.1 │ 10 May 26 15:44 UTC │                     │
+│ stop       │                                                                           │ minikube       │ emmanuel │ v1.38.1 │ 10 May 26 15:46 UTC │                     │
+│ start      │                                                                           │ minikube       │ emmanuel │ v1.38.1 │ 10 May 26 15:46 UTC │ 10 May 26 15:50 UTC │
+│ stop       │                                                                           │ minikube       │ emmanuel │ v1.38.1 │ 10 May 26 15:51 UTC │ 10 May 26 15:52 UTC │
+│ service    │ frontend-service -n cyclopousse -p cyclopousse-ha                         │ cyclopousse-ha │ emmanuel │ v1.38.1 │ 10 May 26 15:54 UTC │ 10 May 26 15:54 UTC │
+│ start      │                                                                           │ minikube       │ emmanuel │ v1.38.1 │ 15 May 26 14:11 UTC │ 15 May 26 14:13 UTC │
+│ start      │ --nodes 3 -p ha-cluster                                                   │ ha-cluster     │ emmanuel │ v1.38.1 │ 15 May 26 14:16 UTC │                     │
+│ service    │ frontend-service -n cyclopousse                                           │ minikube       │ emmanuel │ v1.38.1 │ 15 May 26 14:19 UTC │                     │
+│ service    │ frontend-service -n ha-cluster                                            │ minikube       │ emmanuel │ v1.38.1 │ 15 May 26 14:20 UTC │                     │
+│ service    │ frontend-service -n ha-cluster                                            │ minikube       │ emmanuel │ v1.38.1 │ 15 May 26 14:21 UTC │                     │
+│ stop       │                                                                           │ minikube       │ emmanuel │ v1.38.1 │ 15 May 26 14:23 UTC │ 15 May 26 14:23 UTC │
+│ start      │ --nodes 3 -p ha-cluster                                                   │ ha-cluster     │ emmanuel │ v1.38.1 │ 15 May 26 14:23 UTC │ 15 May 26 14:25 UTC │
+│ service    │ frontend-service -n ha-cluster                                            │ minikube       │ emmanuel │ v1.38.1 │ 15 May 26 14:25 UTC │                     │
+│ service    │ frontend-service -n cyclopousse                                           │ minikube       │ emmanuel │ v1.38.1 │ 15 May 26 14:26 UTC │                     │
+│ start      │                                                                           │ minikube       │ emmanuel │ v1.38.1 │ 15 May 26 14:26 UTC │ 15 May 26 14:28 UTC │
+│ service    │ frontend-service -n cyclopousse                                           │ minikube       │ emmanuel │ v1.38.1 │ 15 May 26 14:28 UTC │                     │
+│ service    │ frontend-service -n ha-cluster                                            │ minikube       │ emmanuel │ v1.38.1 │ 15 May 26 14:28 UTC │                     │
+│ service    │ frontend-service -n ha-cluster                                            │ minikube       │ emmanuel │ v1.38.1 │ 15 May 26 14:29 UTC │                     │
+│ service    │ list                                                                      │ minikube       │ emmanuel │ v1.38.1 │ 15 May 26 14:29 UTC │ 15 May 26 14:29 UTC │
+│ service    │ frontend-service -n kubernetes                                            │ minikube       │ emmanuel │ v1.38.1 │ 15 May 26 14:30 UTC │                     │
+│ service    │ list                                                                      │ minikube       │ emmanuel │ v1.38.1 │ 15 May 26 14:39 UTC │                     │
+│ service    │ frontend-service -n ha-cluster                                            │ minikube       │ emmanuel │ v1.38.1 │ 15 May 26 14:47 UTC │                     │
+│ service    │ frontend-service -n cyclopousse-ha-m02                                    │ minikube       │ emmanuel │ v1.38.1 │ 15 May 26 14:50 UTC │                     │
+│ delete     │ --all                                                                     │ minikube       │ emmanuel │ v1.38.1 │ 15 May 26 15:22 UTC │ 15 May 26 15:23 UTC │
+│ delete     │ --all                                                                     │ minikube       │ emmanuel │ v1.38.1 │ 15 May 26 15:24 UTC │ 15 May 26 15:24 UTC │
+│ start      │ --nodes=2 --cpus=2 --memory=2800 --driver=docker --profile=cyclopousse-ha │ cyclopousse-ha │ emmanuel │ v1.38.1 │ 15 May 26 15:25 UTC │ 15 May 26 15:29 UTC │
+│ service    │ frontend-service -n ha-cyclopousse                                        │ minikube       │ emmanuel │ v1.38.1 │ 15 May 26 15:40 UTC │                     │
+│ service    │ frontend-service -n cyclopousse-ha                                        │ minikube       │ emmanuel │ v1.38.1 │ 15 May 26 15:41 UTC │                     │
+│ start      │                                                                           │ minikube       │ emmanuel │ v1.38.1 │ 15 May 26 15:41 UTC │ 15 May 26 15:44 UTC │
+│ service    │ frontend-service -n ha-cyclopousse                                        │ minikube       │ emmanuel │ v1.38.1 │ 15 May 26 15:45 UTC │                     │
+│ service    │ frontend-service -n cyclopousse-ha                                        │ minikube       │ emmanuel │ v1.38.1 │ 15 May 26 15:46 UTC │                     │
+│ service    │ list -p cyclopousse-ha                                                    │ cyclopousse-ha │ emmanuel │ v1.38.1 │ 15 May 26 15:49 UTC │ 15 May 26 15:49 UTC │
+│ addons     │ enable registry -p cyclopousse-ha                                         │ cyclopousse-ha │ emmanuel │ v1.38.1 │ 15 May 26 15:55 UTC │ 15 May 26 16:00 UTC │
+│ image      │ load cyclopousse-backend:latest -p cyclopousse-ha                         │ cyclopousse-ha │ emmanuel │ v1.38.1 │ 15 May 26 16:08 UTC │ 15 May 26 16:10 UTC │
+│ image      │ load cyclopousse-frontend:latest -p cyclopousse-ha                        │ cyclopousse-ha │ emmanuel │ v1.38.1 │ 15 May 26 16:10 UTC │ 15 May 26 16:11 UTC │
+│ delete     │ --all                                                                     │ minikube       │ emmanuel │ v1.38.1 │ 16 May 26 11:43 UTC │ 16 May 26 11:45 UTC │
+│ start      │ --nodes=2 --cpus=2 --memory=2800 --driver=docker --profile=cyclopousse-ha │ cyclopousse-ha │ emmanuel │ v1.38.1 │ 16 May 26 11:46 UTC │                     │
+└────────────┴───────────────────────────────────────────────────────────────────────────┴────────────────┴──────────┴─────────┴─────────────────────┴─────────────────────┘
+
+
+==> Dernier démarrage <==
+Log file created at: 2026/05/16 11:46:12
+Running on machine: localhost
+Binary: Built with gc go1.25.5 for linux/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0516 11:46:12.507758  105275 out.go:360] Setting OutFile to fd 1 ...
+I0516 11:46:12.508052  105275 out.go:413] isatty.IsTerminal(1) = true
+I0516 11:46:12.508061  105275 out.go:374] Setting ErrFile to fd 2...
+I0516 11:46:12.508072  105275 out.go:413] isatty.IsTerminal(2) = true
+I0516 11:46:12.508691  105275 root.go:338] Updating PATH: /home/emmanuel/.minikube/bin
+I0516 11:46:12.509665  105275 out.go:368] Setting JSON to false
+I0516 11:46:12.736502  105275 start.go:134] hostinfo: {"hostname":"localhost","uptime":74687,"bootTime":1778857286,"procs":273,"os":"linux","platform":"debian","platformFamily":"debian","platformVersion":"12.13","kernelVersion":"6.1.0-44-amd64","kernelArch":"x86_64","virtualizationSystem":"kvm","virtualizationRole":"host","hostId":"ae886fd5-a7ac-4ff1-8df5-ed5c28c19268"}
+I0516 11:46:12.736586  105275 start.go:144] virtualization: kvm host
+I0516 11:46:12.824602  105275 out.go:179] 😄  [cyclopousse-ha] minikube v1.38.1 sur Debian 12.13
+I0516 11:46:12.926369  105275 notify.go:220] Checking for updates...
+I0516 11:46:12.963882  105275 driver.go:422] Setting default libvirt URI to qemu:///system
+I0516 11:46:13.224984  105275 docker.go:125] docker version: linux-20.10.24+dfsg1:
+I0516 11:46:13.225092  105275 cli_runner.go:164] Run: docker system info --format "{{json .}}"
+I0516 11:46:13.447284  105275 info.go:266] docker info: {ID:3JDL:HP74:IRTI:RJVJ:NNFN:QVKV:Z2DN:VX5E:SSBB:WHEF:CPRX:L3EN Containers:6 ContainersRunning:0 ContainersPaused:0 ContainersStopped:6 Images:49 Driver:overlay2 DriverStatus:[[Backing Filesystem extfs] [Supports d_type true] [Native Overlay Diff true] [userxattr false]] SystemStatus:<nil> Plugins:{Volume:[local] Network:[bridge host ipvlan macvlan null overlay] Authorization:<nil> Log:[awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog]} MemoryLimit:true SwapLimit:true KernelMemory:false KernelMemoryTCP:false CPUCfsPeriod:true CPUCfsQuota:true CPUShares:true CPUSet:true PidsLimit:true IPv4Forwarding:true BridgeNfIptables:true BridgeNfIP6Tables:true Debug:false NFd:23 OomKillDisable:false NGoroutines:34 SystemTime:2026-05-16 11:46:13.297314192 +0000 UTC LoggingDriver:json-file CgroupDriver:systemd NEventsListener:0 KernelVersion:6.1.0-44-amd64 OperatingSystem:Debian GNU/Linux 12 (bookworm) OSType:linux Architecture:x86_64 IndexServerAddress:https://index.docker.io/v1/ RegistryConfig:{AllowNondistributableArtifactsCIDRs:[] AllowNondistributableArtifactsHostnames:[] InsecureRegistryCIDRs:[127.0.0.0/8] IndexConfigs:{DockerIo:{Name:docker.io Mirrors:[] Secure:true Official:true}} Mirrors:[]} NCPU:4 MemTotal:8201297920 GenericResources:<nil> DockerRootDir:/var/lib/docker HTTPProxy: HTTPSProxy: NoProxy: Name:localhost Labels:[] ExperimentalBuild:false ServerVersion:20.10.24+dfsg1 ClusterStore: ClusterAdvertise: Runtimes:{Runc:{Path:runc}} DefaultRuntime:runc Swarm:{NodeID: NodeAddr: LocalNodeState:inactive ControlAvailable:false Error: RemoteManagers:<nil>} LiveRestoreEnabled:false Isolation: InitBinary:docker-init ContainerdCommit:{ID:1.6.20~ds1-1+deb12u2 Expected:1.6.20~ds1-1+deb12u2} RuncCommit:{ID:1.1.5+ds1-1+deb12u1 Expected:1.1.5+ds1-1+deb12u1} InitCommit:{ID: Expected:} SecurityOptions:[name=apparmor name=seccomp,profile=default name=cgroupns] ProductLicense: Warnings:<nil> ServerErrors:[] ClientInfo:{Debug:false Plugins:[] Warnings:<nil>}}
+I0516 11:46:13.447346  105275 docker.go:320] overlay module found
+I0516 11:46:13.536374  105275 out.go:179] ✨  Utilisation du pilote docker basé sur la configuration de l'utilisateur
+I0516 11:46:13.592196  105275 start.go:310] selected driver: docker
+I0516 11:46:13.592228  105275 start.go:935] validating driver "docker" against <nil>
+I0516 11:46:13.592262  105275 start.go:946] status for docker: {Installed:true Healthy:true Running:false NeedsImprovement:false Error:<nil> Reason: Fix: Doc: Version:}
+I0516 11:46:13.593739  105275 cli_runner.go:164] Run: docker system info --format "{{json .}}"
+I0516 11:46:13.643627  105275 info.go:266] docker info: {ID:3JDL:HP74:IRTI:RJVJ:NNFN:QVKV:Z2DN:VX5E:SSBB:WHEF:CPRX:L3EN Containers:6 ContainersRunning:0 ContainersPaused:0 ContainersStopped:6 Images:49 Driver:overlay2 DriverStatus:[[Backing Filesystem extfs] [Supports d_type true] [Native Overlay Diff true] [userxattr false]] SystemStatus:<nil> Plugins:{Volume:[local] Network:[bridge host ipvlan macvlan null overlay] Authorization:<nil> Log:[awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog]} MemoryLimit:true SwapLimit:true KernelMemory:false KernelMemoryTCP:false CPUCfsPeriod:true CPUCfsQuota:true CPUShares:true CPUSet:true PidsLimit:true IPv4Forwarding:true BridgeNfIptables:true BridgeNfIP6Tables:true Debug:false NFd:23 OomKillDisable:false NGoroutines:34 SystemTime:2026-05-16 11:46:13.636706895 +0000 UTC LoggingDriver:json-file CgroupDriver:systemd NEventsListener:0 KernelVersion:6.1.0-44-amd64 OperatingSystem:Debian GNU/Linux 12 (bookworm) OSType:linux Architecture:x86_64 IndexServerAddress:https://index.docker.io/v1/ RegistryConfig:{AllowNondistributableArtifactsCIDRs:[] AllowNondistributableArtifactsHostnames:[] InsecureRegistryCIDRs:[127.0.0.0/8] IndexConfigs:{DockerIo:{Name:docker.io Mirrors:[] Secure:true Official:true}} Mirrors:[]} NCPU:4 MemTotal:8201297920 GenericResources:<nil> DockerRootDir:/var/lib/docker HTTPProxy: HTTPSProxy: NoProxy: Name:localhost Labels:[] ExperimentalBuild:false ServerVersion:20.10.24+dfsg1 ClusterStore: ClusterAdvertise: Runtimes:{Runc:{Path:runc}} DefaultRuntime:runc Swarm:{NodeID: NodeAddr: LocalNodeState:inactive ControlAvailable:false Error: RemoteManagers:<nil>} LiveRestoreEnabled:false Isolation: InitBinary:docker-init ContainerdCommit:{ID:1.6.20~ds1-1+deb12u2 Expected:1.6.20~ds1-1+deb12u2} RuncCommit:{ID:1.1.5+ds1-1+deb12u1 Expected:1.1.5+ds1-1+deb12u1} InitCommit:{ID: Expected:} SecurityOptions:[name=apparmor name=seccomp,profile=default name=cgroupns] ProductLicense: Warnings:<nil> ServerErrors:[] ClientInfo:{Debug:false Plugins:[] Warnings:<nil>}}
+W0516 11:46:13.643747  105275 out.go:285] ❗  Starting v1.39.0, minikube will default to "containerd" container runtime. See #21973 for more info.
+I0516 11:46:13.643764  105275 start_flags.go:332] no existing cluster config was found, will generate one from the flags 
+I0516 11:46:13.731342  105275 start_flags.go:1000] Wait components to verify : map[apiserver:true system_pods:true]
+I0516 11:46:13.836893  105275 out.go:179] 📌  Utilisation du pilote Docker avec le privilège root
+I0516 11:46:13.925937  105275 cni.go:83] Creating CNI manager for ""
+I0516 11:46:13.926061  105275 cni.go:135] multinode detected (0 nodes found), recommending kindnet
+I0516 11:46:13.926090  105275 start_flags.go:341] Found "CNI" CNI - setting NetworkPlugin=cni
+I0516 11:46:13.934550  105275 start.go:358] cluster config:
+{Name:cyclopousse-ha KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93 Memory:2800 CPUs:2 DiskSize:20000 Driver:docker HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:8443 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.35.1 ClusterName:cyclopousse-ha Namespace:default APIServerHAVIP: APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI:} Nodes:[{Name: IP: Port:8443 KubernetesVersion:v1.35.1 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:true ExtraDisks:0 CertExpiration:26280h0m0s MountString: Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false DisableCoreDNSLog:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP: SSHAuthSock: SSHAgentPID:0 GPUs: AutoPauseInterval:1m0s Rosetta:false}
+I0516 11:46:14.015216  105275 out.go:179] 👍  Démarrage du nœud "cyclopousse-ha" primary control-plane dans le cluster "cyclopousse-ha"
+I0516 11:46:14.070888  105275 cache.go:135] Beginning downloading kic base image for docker with docker
+I0516 11:46:14.137939  105275 out.go:179] 🚜  Extraction de l'image de base v0.0.50...
+I0516 11:46:14.193564  105275 preload.go:187] Checking if preload exists for k8s version v1.35.1 and runtime docker
+I0516 11:46:14.193560  105275 image.go:82] Checking for gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93 in local docker daemon
+I0516 11:46:14.193691  105275 preload.go:202] Found local preload: /home/emmanuel/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v18-v1.35.1-docker-overlay2-amd64.tar.lz4
+I0516 11:46:14.193719  105275 cache.go:66] Caching tarball of preloaded images
+I0516 11:46:14.194089  105275 preload.go:250] Found /home/emmanuel/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v18-v1.35.1-docker-overlay2-amd64.tar.lz4 in cache, skipping download
+I0516 11:46:14.194131  105275 cache.go:69] Finished verifying existence of preloaded tar for v1.35.1 on docker
+I0516 11:46:14.195387  105275 profile.go:143] Saving config to /home/emmanuel/.minikube/profiles/cyclopousse-ha/config.json ...
+I0516 11:46:14.195464  105275 lock.go:61] WriteFile acquiring /home/emmanuel/.minikube/profiles/cyclopousse-ha/config.json: {Name:mka17b7643853f78d3f8c32f74bed2ebbe817e51 Timeout:1m0s Delay:500ms}
+I0516 11:46:16.149754  105275 image.go:101] Found gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93 in local docker daemon, skipping pull
+I0516 11:46:16.149783  105275 cache.go:159] gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93 exists in daemon, skipping load
+I0516 11:46:16.193083  105275 cache.go:244] Successfully downloaded all kic artifacts
+I0516 11:46:16.193156  105275 start.go:359] acquireMachinesLock for cyclopousse-ha: {Name:mkba0d32e5d22d50495b9d86350149cbf2551757 Timeout:10m0s Delay:500ms}
+I0516 11:46:16.193351  105275 start.go:363] duration metric: took 164.069µs to acquireMachinesLock for "cyclopousse-ha"
+I0516 11:46:16.193384  105275 start.go:92] Provisioning new machine with config: &{Name:cyclopousse-ha KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93 Memory:2800 CPUs:2 DiskSize:20000 Driver:docker HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:8443 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.35.1 ClusterName:cyclopousse-ha Namespace:default APIServerHAVIP: APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI:} Nodes:[{Name: IP: Port:8443 KubernetesVersion:v1.35.1 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:true ExtraDisks:0 CertExpiration:26280h0m0s MountString: Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false DisableCoreDNSLog:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP: SSHAuthSock: SSHAgentPID:0 GPUs: AutoPauseInterval:1m0s Rosetta:false} &{Name: IP: Port:8443 KubernetesVersion:v1.35.1 ContainerRuntime:docker ControlPlane:true Worker:true}
+I0516 11:46:16.193573  105275 start.go:124] createHost starting for "" (driver="docker")
+I0516 11:46:16.296060  105275 out.go:252] 🔥  Création de docker container (CPU=2, Memory=2800Mo) ...
+I0516 11:46:16.296833  105275 start.go:158] libmachine.API.Create for "cyclopousse-ha" (driver="docker")
+I0516 11:46:16.296892  105275 client.go:173] LocalClient.Create starting
+I0516 11:46:16.297402  105275 main.go:144] libmachine: Reading certificate data from /home/emmanuel/.minikube/certs/ca.pem
+I0516 11:46:16.307517  105275 main.go:144] libmachine: Decoding PEM data...
+I0516 11:46:16.307600  105275 main.go:144] libmachine: Parsing certificate...
+I0516 11:46:16.347807  105275 main.go:144] libmachine: Reading certificate data from /home/emmanuel/.minikube/certs/cert.pem
+I0516 11:46:16.348421  105275 main.go:144] libmachine: Decoding PEM data...
+I0516 11:46:16.348468  105275 main.go:144] libmachine: Parsing certificate...
+I0516 11:46:16.349516  105275 cli_runner.go:164] Run: docker network inspect cyclopousse-ha --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}"
+W0516 11:46:16.393139  105275 cli_runner.go:211] docker network inspect cyclopousse-ha --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}" returned with exit code 1
+I0516 11:46:16.393216  105275 network_create.go:285] running [docker network inspect cyclopousse-ha] to gather additional debugging logs...
+I0516 11:46:16.393229  105275 cli_runner.go:164] Run: docker network inspect cyclopousse-ha
+W0516 11:46:16.418491  105275 cli_runner.go:211] docker network inspect cyclopousse-ha returned with exit code 1
+I0516 11:46:16.418511  105275 network_create.go:288] error running [docker network inspect cyclopousse-ha]: docker network inspect cyclopousse-ha: exit status 1
+stdout:
+[]
+
+stderr:
+Error: No such network: cyclopousse-ha
+I0516 11:46:16.418519  105275 network_create.go:290] output of [docker network inspect cyclopousse-ha]: -- stdout --
+[]
+
+-- /stdout --
+** stderr ** 
+Error: No such network: cyclopousse-ha
+
+** /stderr **
+I0516 11:46:16.418604  105275 cli_runner.go:164] Run: docker network inspect bridge --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}"
+I0516 11:46:16.440194  105275 network.go:205] using free private subnet 192.168.49.0/24: &{IP:192.168.49.0 Netmask:255.255.255.0 Prefix:24 CIDR:192.168.49.0/24 Gateway:192.168.49.1 ClientMin:192.168.49.2 ClientMax:192.168.49.254 Broadcast:192.168.49.255 IsPrivate:true Interface:{IfaceName: IfaceIPv4: IfaceMTU:0 IfaceMAC:} reservation:0xc00078abb8}
+I0516 11:46:16.440218  105275 network_create.go:125] attempt to create docker network cyclopousse-ha 192.168.49.0/24 with gateway 192.168.49.1 and MTU of 1500 ...
+I0516 11:46:16.440263  105275 cli_runner.go:164] Run: docker network create --driver=bridge --subnet=192.168.49.0/24 --gateway=192.168.49.1 -o --ip-masq -o --icc -o com.docker.network.driver.mtu=1500 --label=created_by.minikube.sigs.k8s.io=true --label=name.minikube.sigs.k8s.io=cyclopousse-ha cyclopousse-ha
+I0516 11:46:17.555080  105275 cli_runner.go:217] Completed: docker network create --driver=bridge --subnet=192.168.49.0/24 --gateway=192.168.49.1 -o --ip-masq -o --icc -o com.docker.network.driver.mtu=1500 --label=created_by.minikube.sigs.k8s.io=true --label=name.minikube.sigs.k8s.io=cyclopousse-ha cyclopousse-ha: (1.114793311s)
+I0516 11:46:17.555100  105275 network_create.go:109] docker network cyclopousse-ha 192.168.49.0/24 created
+I0516 11:46:17.555110  105275 kic.go:120] calculated static IP "192.168.49.2" for the "cyclopousse-ha" container
+I0516 11:46:17.555177  105275 cli_runner.go:164] Run: docker ps -a --format {{.Names}}
+I0516 11:46:17.605910  105275 cli_runner.go:164] Run: docker volume create cyclopousse-ha --label name.minikube.sigs.k8s.io=cyclopousse-ha --label created_by.minikube.sigs.k8s.io=true
+I0516 11:46:17.797523  105275 oci.go:102] Successfully created a docker volume cyclopousse-ha
+I0516 11:46:17.797581  105275 cli_runner.go:164] Run: docker run --rm --name cyclopousse-ha-preload-sidecar --label created_by.minikube.sigs.k8s.io=true --label name.minikube.sigs.k8s.io=cyclopousse-ha --entrypoint /usr/bin/test -v cyclopousse-ha:/var gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93 -d /var/lib
+I0516 11:46:27.753610  105275 cli_runner.go:217] Completed: docker run --rm --name cyclopousse-ha-preload-sidecar --label created_by.minikube.sigs.k8s.io=true --label name.minikube.sigs.k8s.io=cyclopousse-ha --entrypoint /usr/bin/test -v cyclopousse-ha:/var gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93 -d /var/lib: (9.955979109s)
+I0516 11:46:27.753634  105275 oci.go:106] Successfully prepared a docker volume cyclopousse-ha
+I0516 11:46:27.753705  105275 preload.go:187] Checking if preload exists for k8s version v1.35.1 and runtime docker
+I0516 11:46:27.753717  105275 kic.go:193] Starting extracting preloaded images to volume ...
+I0516 11:46:27.753822  105275 cli_runner.go:164] Run: docker run --rm --entrypoint /usr/bin/tar -v /home/emmanuel/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v18-v1.35.1-docker-overlay2-amd64.tar.lz4:/preloaded.tar:ro -v cyclopousse-ha:/extractDir gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93 -I lz4 -xf /preloaded.tar -C /extractDir
+I0516 11:47:02.871846  105275 cli_runner.go:217] Completed: docker run --rm --entrypoint /usr/bin/tar -v /home/emmanuel/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v18-v1.35.1-docker-overlay2-amd64.tar.lz4:/preloaded.tar:ro -v cyclopousse-ha:/extractDir gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93 -I lz4 -xf /preloaded.tar -C /extractDir: (35.117952067s)
+I0516 11:47:02.871876  105275 kic.go:202] duration metric: took 35.118152373s to extract preloaded images to volume ...
+W0516 11:47:02.872027  105275 cgroups_linux.go:77] Your kernel does not support swap limit capabilities or the cgroup is not mounted.
+W0516 11:47:02.872076  105275 oci.go:251] Your kernel does not support CPU cfs period/quota or the cgroup is not mounted.
+I0516 11:47:02.872146  105275 cli_runner.go:164] Run: docker info --format "'{{json .SecurityOptions}}'"
+I0516 11:47:02.900925  105275 cli_runner.go:164] Run: docker run -d -t --privileged --security-opt seccomp=unconfined --tmpfs /tmp --tmpfs /run -v /lib/modules:/lib/modules:ro --hostname cyclopousse-ha --name cyclopousse-ha --label created_by.minikube.sigs.k8s.io=true --label name.minikube.sigs.k8s.io=cyclopousse-ha --label role.minikube.sigs.k8s.io= --label mode.minikube.sigs.k8s.io=cyclopousse-ha --network cyclopousse-ha --ip 192.168.49.2 --volume cyclopousse-ha:/var --security-opt apparmor=unconfined --memory=2800mb -e container=docker --expose 8443 --publish=127.0.0.1::8443 --publish=127.0.0.1::22 --publish=127.0.0.1::2376 --publish=127.0.0.1::5000 --publish=127.0.0.1::32443 gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93
+I0516 11:47:06.112209  105275 cli_runner.go:217] Completed: docker run -d -t --privileged --security-opt seccomp=unconfined --tmpfs /tmp --tmpfs /run -v /lib/modules:/lib/modules:ro --hostname cyclopousse-ha --name cyclopousse-ha --label created_by.minikube.sigs.k8s.io=true --label name.minikube.sigs.k8s.io=cyclopousse-ha --label role.minikube.sigs.k8s.io= --label mode.minikube.sigs.k8s.io=cyclopousse-ha --network cyclopousse-ha --ip 192.168.49.2 --volume cyclopousse-ha:/var --security-opt apparmor=unconfined --memory=2800mb -e container=docker --expose 8443 --publish=127.0.0.1::8443 --publish=127.0.0.1::22 --publish=127.0.0.1::2376 --publish=127.0.0.1::5000 --publish=127.0.0.1::32443 gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93: (3.21121537s)
+I0516 11:47:06.112311  105275 cli_runner.go:164] Run: docker container inspect cyclopousse-ha --format={{.State.Running}}
+I0516 11:47:06.134411  105275 cli_runner.go:164] Run: docker container inspect cyclopousse-ha --format={{.State.Status}}
+I0516 11:47:06.155539  105275 cli_runner.go:164] Run: docker exec cyclopousse-ha stat /var/lib/dpkg/alternatives/iptables
+I0516 11:47:06.250957  105275 oci.go:143] the created container "cyclopousse-ha" has a running status.
+I0516 11:47:06.250972  105275 kic.go:224] Creating ssh key for kic: /home/emmanuel/.minikube/machines/cyclopousse-ha/id_rsa...
+I0516 11:47:06.365355  105275 kic_runner.go:190] docker (temp): /home/emmanuel/.minikube/machines/cyclopousse-ha/id_rsa.pub --> /home/docker/.ssh/authorized_keys (381 bytes)
+I0516 11:47:06.911222  105275 cli_runner.go:164] Run: docker container inspect cyclopousse-ha --format={{.State.Status}}
+I0516 11:47:06.937961  105275 kic_runner.go:92] Run: chown docker:docker /home/docker/.ssh/authorized_keys
+I0516 11:47:06.937970  105275 kic_runner.go:113] Args: [docker exec --privileged cyclopousse-ha chown docker:docker /home/docker/.ssh/authorized_keys]
+I0516 11:47:07.123001  105275 cli_runner.go:164] Run: docker container inspect cyclopousse-ha --format={{.State.Status}}
+I0516 11:47:07.143498  105275 machine.go:96] provisionDockerMachine start ...
+I0516 11:47:07.143569  105275 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" cyclopousse-ha
+I0516 11:47:07.173728  105275 main.go:144] libmachine: Using SSH client type: native
+I0516 11:47:07.173988  105275 main.go:144] libmachine: &{{{<nil> 0 [] [] []} docker [0x906360] 0x909000 <nil>  [] 0s} 127.0.0.1 32787 <nil> <nil>}
+I0516 11:47:07.173995  105275 main.go:144] libmachine: About to run SSH command:
+hostname
+I0516 11:47:07.174461  105275 main.go:144] libmachine: Error dialing TCP: ssh: handshake failed: read tcp 127.0.0.1:45642->127.0.0.1:32787: read: connection reset by peer
+I0516 11:47:10.175896  105275 main.go:144] libmachine: Error dialing TCP: ssh: handshake failed: read tcp 127.0.0.1:45646->127.0.0.1:32787: read: connection reset by peer
+I0516 11:47:13.967997  105275 main.go:144] libmachine: SSH cmd err, output: <nil>: cyclopousse-ha
+
+I0516 11:47:13.968019  105275 ubuntu.go:182] provisioning hostname "cyclopousse-ha"
+I0516 11:47:13.968109  105275 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" cyclopousse-ha
+I0516 11:47:13.990642  105275 main.go:144] libmachine: Using SSH client type: native
+I0516 11:47:13.990878  105275 main.go:144] libmachine: &{{{<nil> 0 [] [] []} docker [0x906360] 0x909000 <nil>  [] 0s} 127.0.0.1 32787 <nil> <nil>}
+I0516 11:47:13.990885  105275 main.go:144] libmachine: About to run SSH command:
+sudo hostname cyclopousse-ha && echo "cyclopousse-ha" | sudo tee /etc/hostname
+I0516 11:47:14.200225  105275 main.go:144] libmachine: SSH cmd err, output: <nil>: cyclopousse-ha
+
+I0516 11:47:14.200326  105275 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" cyclopousse-ha
+I0516 11:47:14.222055  105275 main.go:144] libmachine: Using SSH client type: native
+I0516 11:47:14.222294  105275 main.go:144] libmachine: &{{{<nil> 0 [] [] []} docker [0x906360] 0x909000 <nil>  [] 0s} 127.0.0.1 32787 <nil> <nil>}
+I0516 11:47:14.222307  105275 main.go:144] libmachine: About to run SSH command:
+
+		if ! grep -xq '.*\scyclopousse-ha' /etc/hosts; then
+			if grep -xq '127.0.1.1\s.*' /etc/hosts; then
+				sudo sed -i 's/^127.0.1.1\s.*/127.0.1.1 cyclopousse-ha/g' /etc/hosts;
+			else 
+				echo '127.0.1.1 cyclopousse-ha' | sudo tee -a /etc/hosts; 
+			fi
+		fi
+I0516 11:47:14.356014  105275 main.go:144] libmachine: SSH cmd err, output: <nil>: 
+I0516 11:47:14.395273  105275 ubuntu.go:188] set auth options {CertDir:/home/emmanuel/.minikube CaCertPath:/home/emmanuel/.minikube/certs/ca.pem CaPrivateKeyPath:/home/emmanuel/.minikube/certs/ca-key.pem CaCertRemotePath:/etc/docker/ca.pem ServerCertPath:/home/emmanuel/.minikube/machines/server.pem ServerKeyPath:/home/emmanuel/.minikube/machines/server-key.pem ClientKeyPath:/home/emmanuel/.minikube/certs/key.pem ServerCertRemotePath:/etc/docker/server.pem ServerKeyRemotePath:/etc/docker/server-key.pem ClientCertPath:/home/emmanuel/.minikube/certs/cert.pem ServerCertSANs:[] StorePath:/home/emmanuel/.minikube}
+I0516 11:47:14.395294  105275 ubuntu.go:190] setting up certificates
+I0516 11:47:14.395301  105275 provision.go:83] configureAuth start
+I0516 11:47:14.395366  105275 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" cyclopousse-ha
+I0516 11:47:14.416004  105275 provision.go:142] copyHostCerts
+I0516 11:47:14.416059  105275 exec_runner.go:143] found /home/emmanuel/.minikube/ca.pem, removing ...
+I0516 11:47:14.416066  105275 exec_runner.go:202] rm: /home/emmanuel/.minikube/ca.pem
+I0516 11:47:14.416117  105275 exec_runner.go:150] cp: /home/emmanuel/.minikube/certs/ca.pem --> /home/emmanuel/.minikube/ca.pem (1082 bytes)
+I0516 11:47:14.416237  105275 exec_runner.go:143] found /home/emmanuel/.minikube/cert.pem, removing ...
+I0516 11:47:14.416241  105275 exec_runner.go:202] rm: /home/emmanuel/.minikube/cert.pem
+I0516 11:47:14.416268  105275 exec_runner.go:150] cp: /home/emmanuel/.minikube/certs/cert.pem --> /home/emmanuel/.minikube/cert.pem (1127 bytes)
+I0516 11:47:14.416332  105275 exec_runner.go:143] found /home/emmanuel/.minikube/key.pem, removing ...
+I0516 11:47:14.416335  105275 exec_runner.go:202] rm: /home/emmanuel/.minikube/key.pem
+I0516 11:47:14.416359  105275 exec_runner.go:150] cp: /home/emmanuel/.minikube/certs/key.pem --> /home/emmanuel/.minikube/key.pem (1675 bytes)
+I0516 11:47:14.490092  105275 provision.go:116] generating server cert: /home/emmanuel/.minikube/machines/server.pem ca-key=/home/emmanuel/.minikube/certs/ca.pem private-key=/home/emmanuel/.minikube/certs/ca-key.pem org=emmanuel.cyclopousse-ha san=[127.0.0.1 192.168.49.2 cyclopousse-ha localhost minikube]
+I0516 11:47:14.650398  105275 provision.go:176] copyRemoteCerts
+I0516 11:47:14.677462  105275 ssh_runner.go:194] Run: sudo mkdir -p /etc/docker /etc/docker /etc/docker
+I0516 11:47:14.677545  105275 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" cyclopousse-ha
+I0516 11:47:14.697855  105275 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:32787 SSHKeyPath:/home/emmanuel/.minikube/machines/cyclopousse-ha/id_rsa Username:docker}
+I0516 11:47:14.795888  105275 ssh_runner.go:361] scp /home/emmanuel/.minikube/certs/ca.pem --> /etc/docker/ca.pem (1082 bytes)
+I0516 11:47:15.031856  105275 ssh_runner.go:361] scp /home/emmanuel/.minikube/machines/server.pem --> /etc/docker/server.pem (1212 bytes)
+I0516 11:47:15.050645  105275 ssh_runner.go:361] scp /home/emmanuel/.minikube/machines/server-key.pem --> /etc/docker/server-key.pem (1679 bytes)
+I0516 11:47:15.069271  105275 provision.go:86] duration metric: took 673.955265ms to configureAuth
+I0516 11:47:15.069290  105275 ubuntu.go:206] setting minikube options for container-runtime
+I0516 11:47:15.069456  105275 config.go:183] Loaded profile config "cyclopousse-ha": Driver=docker, ContainerRuntime=docker, KubernetesVersion=v1.35.1
+I0516 11:47:15.069798  105275 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" cyclopousse-ha
+I0516 11:47:15.090843  105275 main.go:144] libmachine: Using SSH client type: native
+I0516 11:47:15.091060  105275 main.go:144] libmachine: &{{{<nil> 0 [] [] []} docker [0x906360] 0x909000 <nil>  [] 0s} 127.0.0.1 32787 <nil> <nil>}
+I0516 11:47:15.091066  105275 main.go:144] libmachine: About to run SSH command:
+df --output=fstype / | tail -n 1
+I0516 11:47:15.259968  105275 main.go:144] libmachine: SSH cmd err, output: <nil>: overlay
+
+I0516 11:47:15.259981  105275 ubuntu.go:71] root file system type: overlay
+I0516 11:47:15.260075  105275 provision.go:313] Updating docker unit: /lib/systemd/system/docker.service ...
+I0516 11:47:15.260137  105275 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" cyclopousse-ha
+I0516 11:47:15.280952  105275 main.go:144] libmachine: Using SSH client type: native
+I0516 11:47:15.281198  105275 main.go:144] libmachine: &{{{<nil> 0 [] [] []} docker [0x906360] 0x909000 <nil>  [] 0s} 127.0.0.1 32787 <nil> <nil>}
+I0516 11:47:15.281263  105275 main.go:144] libmachine: About to run SSH command:
+sudo mkdir -p /lib/systemd/system && printf %s "[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+After=network-online.target nss-lookup.target docker.socket firewalld.service containerd.service time-set.target
+Wants=network-online.target containerd.service
+Requires=docker.socket
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=always
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 \
+	-H fd:// --containerd=/run/containerd/containerd.sock \
+	-H unix:///var/run/docker.sock \
+	--default-ulimit=nofile=1048576:1048576 \
+	--tlsverify \
+	--tlscacert /etc/docker/ca.pem \
+	--tlscert /etc/docker/server.pem \
+	--tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP \$MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+OOMScoreAdjust=-500
+
+[Install]
+WantedBy=multi-user.target
+" | sudo tee /lib/systemd/system/docker.service.new
+I0516 11:47:15.425518  105275 main.go:144] libmachine: SSH cmd err, output: <nil>: [Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+After=network-online.target nss-lookup.target docker.socket firewalld.service containerd.service time-set.target
+Wants=network-online.target containerd.service
+Requires=docker.socket
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=always
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 	-H fd:// --containerd=/run/containerd/containerd.sock 	-H unix:///var/run/docker.sock 	--default-ulimit=nofile=1048576:1048576 	--tlsverify 	--tlscacert /etc/docker/ca.pem 	--tlscert /etc/docker/server.pem 	--tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP $MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+OOMScoreAdjust=-500
+
+[Install]
+WantedBy=multi-user.target
+
+I0516 11:47:15.425583  105275 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" cyclopousse-ha
+I0516 11:47:15.447370  105275 main.go:144] libmachine: Using SSH client type: native
+I0516 11:47:15.447611  105275 main.go:144] libmachine: &{{{<nil> 0 [] [] []} docker [0x906360] 0x909000 <nil>  [] 0s} 127.0.0.1 32787 <nil> <nil>}
+I0516 11:47:15.447626  105275 main.go:144] libmachine: About to run SSH command:
+sudo diff -u /lib/systemd/system/docker.service /lib/systemd/system/docker.service.new || { sudo mv /lib/systemd/system/docker.service.new /lib/systemd/system/docker.service; sudo systemctl -f daemon-reload && sudo systemctl -f enable docker && sudo systemctl -f restart docker; }
+I0516 11:47:21.689203  105275 main.go:144] libmachine: SSH cmd err, output: <nil>: --- /lib/systemd/system/docker.service	2026-02-02 17:15:49.000000000 +0000
++++ /lib/systemd/system/docker.service.new	2026-05-16 11:47:15.421240286 +0000
+@@ -9,23 +9,34 @@
+ 
+ [Service]
+ Type=notify
+-# the default is not to use systemd for cgroups because the delegate issues still
+-# exists and systemd currently does not support the cgroup feature set required
+-# for containers run by docker
+-ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+-ExecReload=/bin/kill -s HUP $MAINPID
+-TimeoutStartSec=0
+-RestartSec=2
+ Restart=always
+ 
++
++
++# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
++# The base configuration already specifies an 'ExecStart=...' command. The first directive
++# here is to clear out that command inherited from the base configuration. Without this,
++# the command from the base configuration and the command specified here are treated as
++# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
++# will catch this invalid input and refuse to start the service with an error like:
++#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
++
++# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
++# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
++ExecStart=
++ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 	-H fd:// --containerd=/run/containerd/containerd.sock 	-H unix:///var/run/docker.sock 	--default-ulimit=nofile=1048576:1048576 	--tlsverify 	--tlscacert /etc/docker/ca.pem 	--tlscert /etc/docker/server.pem 	--tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12 
++ExecReload=/bin/kill -s HUP $MAINPID
++
+ # Having non-zero Limit*s causes performance problems due to accounting overhead
+ # in the kernel. We recommend using cgroups to do container-local accounting.
++LimitNOFILE=infinity
+ LimitNPROC=infinity
+ LimitCORE=infinity
+ 
+-# Comment TasksMax if your systemd version does not support it.
+-# Only systemd 226 and above support this option.
++# Uncomment TasksMax if your systemd version supports it.
++# Only systemd 226 and above support this version.
+ TasksMax=infinity
++TimeoutStartSec=0
+ 
+ # set delegate yes so that systemd does not reset the cgroups of docker containers
+ Delegate=yes
+Synchronizing state of docker.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable docker
+
+I0516 11:47:21.689216  105275 machine.go:99] duration metric: took 14.545708802s to provisionDockerMachine
+I0516 11:47:21.689227  105275 client.go:176] duration metric: took 1m5.392328902s to LocalClient.Create
+I0516 11:47:21.689241  105275 start.go:166] duration metric: took 1m5.392420457s to libmachine.API.Create "cyclopousse-ha"
+I0516 11:47:21.689247  105275 start.go:292] postStartSetup for "cyclopousse-ha" (driver="docker")
+I0516 11:47:21.689261  105275 start.go:321] creating required directories: [/etc/kubernetes/addons /etc/kubernetes/manifests /var/tmp/minikube /var/lib/minikube /var/lib/minikube/certs /var/lib/minikube/images /var/lib/minikube/binaries /tmp/gvisor /usr/share/ca-certificates /etc/ssl/certs]
+I0516 11:47:21.689328  105275 ssh_runner.go:194] Run: sudo mkdir -p /etc/kubernetes/addons /etc/kubernetes/manifests /var/tmp/minikube /var/lib/minikube /var/lib/minikube/certs /var/lib/minikube/images /var/lib/minikube/binaries /tmp/gvisor /usr/share/ca-certificates /etc/ssl/certs
+I0516 11:47:21.689395  105275 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" cyclopousse-ha
+I0516 11:47:21.713315  105275 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:32787 SSHKeyPath:/home/emmanuel/.minikube/machines/cyclopousse-ha/id_rsa Username:docker}
+I0516 11:47:21.811892  105275 ssh_runner.go:194] Run: cat /etc/os-release
+I0516 11:47:21.815249  105275 main.go:144] libmachine: Couldn't set key VERSION_CODENAME, no corresponding struct field found
+I0516 11:47:21.815266  105275 info.go:137] Remote host: Debian GNU/Linux 12 (bookworm)
+I0516 11:47:21.815274  105275 filesync.go:125] Scanning /home/emmanuel/.minikube/addons for local assets ...
+I0516 11:47:21.834367  105275 filesync.go:125] Scanning /home/emmanuel/.minikube/files for local assets ...
+I0516 11:47:21.834646  105275 start.go:295] duration metric: took 145.391473ms for postStartSetup
+I0516 11:47:21.834945  105275 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" cyclopousse-ha
+I0516 11:47:21.855572  105275 profile.go:143] Saving config to /home/emmanuel/.minikube/profiles/cyclopousse-ha/config.json ...
+I0516 11:47:21.855831  105275 ssh_runner.go:194] Run: sh -c "df -h /var | awk 'NR==2{print $5}'"
+I0516 11:47:21.855864  105275 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" cyclopousse-ha
+I0516 11:47:21.876803  105275 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:32787 SSHKeyPath:/home/emmanuel/.minikube/machines/cyclopousse-ha/id_rsa Username:docker}
+I0516 11:47:21.996420  105275 ssh_runner.go:194] Run: sh -c "df -BG /var | awk 'NR==2{print $4}'"
+I0516 11:47:22.000840  105275 start.go:127] duration metric: took 1m5.807251175s to createHost
+I0516 11:47:22.000853  105275 start.go:82] releasing machines lock for "cyclopousse-ha", held for 1m5.807488947s
+I0516 11:47:22.000915  105275 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" cyclopousse-ha
+I0516 11:47:22.020770  105275 ssh_runner.go:194] Run: cat /version.json
+I0516 11:47:22.020806  105275 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" cyclopousse-ha
+I0516 11:47:22.020855  105275 ssh_runner.go:194] Run: curl -sS -m 2 https://registry.k8s.io/
+I0516 11:47:22.020905  105275 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" cyclopousse-ha
+I0516 11:47:22.046702  105275 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:32787 SSHKeyPath:/home/emmanuel/.minikube/machines/cyclopousse-ha/id_rsa Username:docker}
+I0516 11:47:22.048003  105275 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:32787 SSHKeyPath:/home/emmanuel/.minikube/machines/cyclopousse-ha/id_rsa Username:docker}
+I0516 11:47:24.129390  105275 ssh_runner.go:234] Completed: cat /version.json: (2.10859751s)
+I0516 11:47:24.129432  105275 ssh_runner.go:234] Completed: curl -sS -m 2 https://registry.k8s.io/: (2.108558812s)
+I0516 11:47:24.129573  105275 ssh_runner.go:194] Run: systemctl --version
+I0516 11:47:24.135779  105275 ssh_runner.go:194] Run: sh -c "stat /etc/cni/net.d/*loopback.conf*"
+W0516 11:47:24.139656  105275 cni.go:208] loopback cni configuration skipped: "/etc/cni/net.d/*loopback.conf*" not found
+I0516 11:47:24.139723  105275 ssh_runner.go:194] Run: sudo find /etc/cni/net.d -maxdepth 1 -type f ( ( -name *bridge* -or -name *podman* ) -and -not -name *.mk_disabled ) -printf "%p, " -exec sh -c "sudo mv {} {}.mk_disabled" ;
+I0516 11:47:24.360990  105275 cni.go:261] disabled [/etc/cni/net.d/10-crio-bridge.conflist.disabled, /etc/cni/net.d/87-podman-bridge.conflist] bridge cni config(s)
+I0516 11:47:24.361025  105275 start.go:497] detecting cgroup driver to use...
+I0516 11:47:24.361057  105275 detect.go:178] detected "systemd" cgroup driver on host os
+I0516 11:47:24.361150  105275 ssh_runner.go:194] Run: /bin/bash -c "sudo mkdir -p /etc && printf %s "runtime-endpoint: unix:///run/containerd/containerd.sock
+" | sudo tee /etc/crictl.yaml"
+I0516 11:47:24.379361  105275 ssh_runner.go:194] Run: sh -c "sudo sed -i -r 's|^( *)sandbox_image = .*$|\1sandbox_image = "registry.k8s.io/pause:3.10.1"|' /etc/containerd/config.toml"
+I0516 11:47:24.409722  105275 ssh_runner.go:194] Run: sh -c "sudo sed -i -r 's|^( *)restrict_oom_score_adj = .*$|\1restrict_oom_score_adj = false|' /etc/containerd/config.toml"
+I0516 11:47:24.420428  105275 containerd.go:146] configuring containerd to use "systemd" as cgroup driver...
+I0516 11:47:24.420493  105275 ssh_runner.go:194] Run: sh -c "sudo sed -i -r 's|^( *)SystemdCgroup = .*$|\1SystemdCgroup = true|g' /etc/containerd/config.toml"
+I0516 11:47:24.430978  105275 ssh_runner.go:194] Run: sh -c "sudo sed -i 's|"io.containerd.runtime.v1.linux"|"io.containerd.runc.v2"|g' /etc/containerd/config.toml"
+I0516 11:47:24.441733  105275 ssh_runner.go:194] Run: sh -c "sudo sed -i '/systemd_cgroup/d' /etc/containerd/config.toml"
+I0516 11:47:24.450832  105275 ssh_runner.go:194] Run: sh -c "sudo sed -i 's|"io.containerd.runc.v1"|"io.containerd.runc.v2"|g' /etc/containerd/config.toml"
+I0516 11:47:24.460144  105275 ssh_runner.go:194] Run: sh -c "sudo rm -rf /etc/cni/net.mk"
+I0516 11:47:24.468727  105275 ssh_runner.go:194] Run: sh -c "sudo sed -i -r 's|^( *)conf_dir = .*$|\1conf_dir = "/etc/cni/net.d"|g' /etc/containerd/config.toml"
+I0516 11:47:24.477511  105275 ssh_runner.go:194] Run: sh -c "sudo sed -i '/^ *enable_unprivileged_ports = .*/d' /etc/containerd/config.toml"
+I0516 11:47:24.486611  105275 ssh_runner.go:194] Run: sh -c "sudo sed -i -r 's|^( *)\[plugins."io.containerd.grpc.v1.cri"\]|&\n\1  enable_unprivileged_ports = true|' /etc/containerd/config.toml"
+I0516 11:47:24.495821  105275 ssh_runner.go:194] Run: sudo sysctl net.bridge.bridge-nf-call-iptables
+I0516 11:47:24.533833  105275 ssh_runner.go:194] Run: sudo sh -c "echo 1 > /proc/sys/net/ipv4/ip_forward"
+I0516 11:47:24.541172  105275 ssh_runner.go:194] Run: sudo systemctl daemon-reload
+I0516 11:47:24.644857  105275 ssh_runner.go:194] Run: sudo systemctl restart containerd
+I0516 11:47:24.753762  105275 start.go:497] detecting cgroup driver to use...
+I0516 11:47:24.753796  105275 detect.go:178] detected "systemd" cgroup driver on host os
+I0516 11:47:24.753843  105275 ssh_runner.go:194] Run: sudo systemctl cat docker.service
+I0516 11:47:24.768100  105275 ssh_runner.go:194] Run: sudo systemctl is-active --quiet service containerd
+I0516 11:47:24.780479  105275 ssh_runner.go:194] Run: sudo systemctl stop -f containerd
+I0516 11:47:24.797151  105275 ssh_runner.go:194] Run: sudo systemctl is-active --quiet service containerd
+I0516 11:47:24.810598  105275 ssh_runner.go:194] Run: sudo systemctl is-active --quiet service crio
+I0516 11:47:24.824043  105275 ssh_runner.go:194] Run: /bin/bash -c "sudo mkdir -p /etc && printf %s "runtime-endpoint: unix:///var/run/cri-dockerd.sock
+" | sudo tee /etc/crictl.yaml"
+I0516 11:47:24.838560  105275 ssh_runner.go:194] Run: which cri-dockerd
+I0516 11:47:24.842051  105275 ssh_runner.go:194] Run: sudo mkdir -p /etc/systemd/system/cri-docker.service.d
+I0516 11:47:24.849677  105275 ssh_runner.go:361] scp memory --> /etc/systemd/system/cri-docker.service.d/10-cni.conf (192 bytes)
+I0516 11:47:24.862790  105275 ssh_runner.go:194] Run: sudo systemctl unmask docker.service
+I0516 11:47:24.978013  105275 ssh_runner.go:194] Run: sudo systemctl enable docker.socket
+I0516 11:47:25.092536  105275 docker.go:577] configuring docker to use "systemd" as cgroup driver...
+I0516 11:47:25.092606  105275 ssh_runner.go:361] scp memory --> /etc/docker/daemon.json (129 bytes)
+I0516 11:47:25.106689  105275 ssh_runner.go:194] Run: sudo systemctl reset-failed docker
+I0516 11:47:25.119794  105275 ssh_runner.go:194] Run: sudo systemctl daemon-reload
+I0516 11:47:25.227387  105275 ssh_runner.go:194] Run: sudo systemctl restart docker
+I0516 11:47:27.830959  105275 ssh_runner.go:234] Completed: sudo systemctl restart docker: (2.603548948s)
+I0516 11:47:27.831025  105275 ssh_runner.go:194] Run: sudo systemctl is-active --quiet service docker
+I0516 11:47:27.843847  105275 ssh_runner.go:194] Run: sudo systemctl is-active --quiet service cri-docker.socket
+I0516 11:47:27.856791  105275 ssh_runner.go:194] Run: sudo systemctl is-active --quiet service cri-docker.service
+I0516 11:47:27.870044  105275 ssh_runner.go:194] Run: sudo systemctl unmask cri-docker.socket
+I0516 11:47:27.993365  105275 ssh_runner.go:194] Run: sudo systemctl enable cri-docker.socket
+I0516 11:47:28.096287  105275 ssh_runner.go:194] Run: sudo systemctl daemon-reload
+I0516 11:47:28.206268  105275 ssh_runner.go:194] Run: sudo systemctl restart cri-docker.socket
+I0516 11:47:28.250634  105275 ssh_runner.go:194] Run: sudo systemctl reset-failed cri-docker.service
+I0516 11:47:28.262448  105275 ssh_runner.go:194] Run: sudo systemctl daemon-reload
+I0516 11:47:28.370303  105275 ssh_runner.go:194] Run: sudo systemctl restart cri-docker.service
+I0516 11:47:31.081206  105275 ssh_runner.go:234] Completed: sudo systemctl restart cri-docker.service: (2.710879271s)
+I0516 11:47:31.081279  105275 ssh_runner.go:194] Run: sudo systemctl is-active --quiet service cri-docker.service
+I0516 11:47:31.093573  105275 start.go:554] Will wait 60s for socket path /var/run/cri-dockerd.sock
+I0516 11:47:31.093627  105275 ssh_runner.go:194] Run: stat /var/run/cri-dockerd.sock
+I0516 11:47:31.097127  105275 start.go:575] Will wait 60s for crictl version
+I0516 11:47:31.097181  105275 ssh_runner.go:194] Run: which crictl
+I0516 11:47:31.100429  105275 ssh_runner.go:194] Run: sudo /usr/local/bin/crictl version
+I0516 11:47:32.686170  105275 ssh_runner.go:234] Completed: sudo /usr/local/bin/crictl version: (1.585716233s)
+I0516 11:47:32.686186  105275 start.go:591] Version:  0.1.0
+RuntimeName:  docker
+RuntimeVersion:  29.2.1
+RuntimeApiVersion:  v1
+I0516 11:47:32.686238  105275 ssh_runner.go:194] Run: docker version --format {{.Server.Version}}
+I0516 11:47:34.556028  105275 ssh_runner.go:234] Completed: docker version --format {{.Server.Version}}: (1.869772703s)
+I0516 11:47:34.556082  105275 ssh_runner.go:194] Run: docker version --format {{.Server.Version}}
+I0516 11:47:34.643853  105275 out.go:252] 🐳  Préparation de Kubernetes v1.35.1 sur Docker 29.2.1...
+I0516 11:47:34.644001  105275 cli_runner.go:164] Run: docker network inspect cyclopousse-ha --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}"
+I0516 11:47:34.666302  105275 ssh_runner.go:194] Run: grep 192.168.49.1	host.minikube.internal$ /etc/hosts
+I0516 11:47:34.669929  105275 ssh_runner.go:194] Run: /bin/bash -c "{ grep -v $'\thost.minikube.internal$' "/etc/hosts"; echo "192.168.49.1	host.minikube.internal"; } > /tmp/h.$$; sudo cp /tmp/h.$$ "/etc/hosts""
+I0516 11:47:34.679636  105275 kubeadm.go:883] updating cluster {Name:cyclopousse-ha KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93 Memory:2800 CPUs:2 DiskSize:20000 Driver:docker HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:8443 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.35.1 ClusterName:cyclopousse-ha Namespace:default APIServerHAVIP: APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI:} Nodes:[{Name: IP:192.168.49.2 Port:8443 KubernetesVersion:v1.35.1 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:true ExtraDisks:0 CertExpiration:26280h0m0s MountString: Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false DisableCoreDNSLog:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP: SSHAuthSock: SSHAgentPID:0 GPUs: AutoPauseInterval:1m0s Rosetta:false} ...
+I0516 11:47:34.679715  105275 preload.go:187] Checking if preload exists for k8s version v1.35.1 and runtime docker
+I0516 11:47:34.679766  105275 ssh_runner.go:194] Run: docker images --format {{.Repository}}:{{.Tag}}
+I0516 11:47:34.698139  105275 docker.go:693] Got preloaded images: -- stdout --
+registry.k8s.io/kube-apiserver:v1.35.1
+registry.k8s.io/kube-controller-manager:v1.35.1
+registry.k8s.io/kube-scheduler:v1.35.1
+registry.k8s.io/kube-proxy:v1.35.1
+registry.k8s.io/etcd:3.6.6-0
+registry.k8s.io/coredns/coredns:v1.13.1
+registry.k8s.io/pause:3.10.1
+gcr.io/k8s-minikube/storage-provisioner:v5
+
+-- /stdout --
+I0516 11:47:34.698150  105275 docker.go:623] Images already preloaded, skipping extraction
+I0516 11:47:34.698208  105275 ssh_runner.go:194] Run: docker images --format {{.Repository}}:{{.Tag}}
+I0516 11:47:34.716635  105275 docker.go:693] Got preloaded images: -- stdout --
+registry.k8s.io/kube-apiserver:v1.35.1
+registry.k8s.io/kube-scheduler:v1.35.1
+registry.k8s.io/kube-proxy:v1.35.1
+registry.k8s.io/kube-controller-manager:v1.35.1
+registry.k8s.io/etcd:3.6.6-0
+registry.k8s.io/coredns/coredns:v1.13.1
+registry.k8s.io/pause:3.10.1
+gcr.io/k8s-minikube/storage-provisioner:v5
+
+-- /stdout --
+I0516 11:47:34.716646  105275 cache_images.go:85] Images are preloaded, skipping loading
+I0516 11:47:34.716653  105275 kubeadm.go:934] updating node { 192.168.49.2 8443 v1.35.1 docker true true} ...
+I0516 11:47:34.716726  105275 kubeadm.go:946] kubelet [Unit]
+Wants=docker.socket
+
+[Service]
+ExecStart=
+ExecStart=/var/lib/minikube/binaries/v1.35.1/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --config=/var/lib/kubelet/config.yaml --hostname-override=cyclopousse-ha --kubeconfig=/etc/kubernetes/kubelet.conf --node-ip=192.168.49.2
+
+[Install]
+ config:
+{KubernetesVersion:v1.35.1 ClusterName:cyclopousse-ha Namespace:default APIServerHAVIP: APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI:}
+I0516 11:47:34.716782  105275 ssh_runner.go:194] Run: docker info --format {{.CgroupDriver}}
+I0516 11:47:39.867434  105275 ssh_runner.go:234] Completed: docker info --format {{.CgroupDriver}}: (5.150629912s)
+I0516 11:47:39.867475  105275 cni.go:83] Creating CNI manager for ""
+I0516 11:47:39.867481  105275 cni.go:135] multinode detected (1 nodes found), recommending kindnet
+I0516 11:47:39.867498  105275 kubeadm.go:84] Using pod CIDR: 10.244.0.0/16
+I0516 11:47:39.880238  105275 kubeadm.go:196] kubeadm options: {CertDir:/var/lib/minikube/certs ServiceCIDR:10.96.0.0/12 PodSubnet:10.244.0.0/16 AdvertiseAddress:192.168.49.2 APIServerPort:8443 KubernetesVersion:v1.35.1 EtcdDataDir:/var/lib/minikube/etcd EtcdExtraArgs:map[] ClusterName:cyclopousse-ha NodeName:cyclopousse-ha DNSDomain:cluster.local CRISocket:/var/run/cri-dockerd.sock ImageRepository: ComponentOptions:[{Component:apiServer ExtraArgs:map[enable-admission-plugins:NamespaceLifecycle,LimitRanger,ServiceAccount,DefaultStorageClass,DefaultTolerationSeconds,NodeRestriction,MutatingAdmissionWebhook,ValidatingAdmissionWebhook,ResourceQuota] Pairs:map[certSANs:["127.0.0.1", "localhost", "192.168.49.2"]]} {Component:controllerManager ExtraArgs:map[allocate-node-cidrs:true leader-elect:false] Pairs:map[]} {Component:scheduler ExtraArgs:map[leader-elect:false] Pairs:map[]}] FeatureArgs:map[] NodeIP:192.168.49.2 CgroupDriver:systemd ClientCAFile:/var/lib/minikube/certs/ca.crt StaticPodPath:/etc/kubernetes/manifests ControlPlaneAddress:control-plane.minikube.internal KubeProxyOptions:map[] ResolvConfSearchRegression:false KubeletConfigOpts:map[containerRuntimeEndpoint:unix:///var/run/cri-dockerd.sock hairpinMode:hairpin-veth runtimeRequestTimeout:15m] PrependCriSocketUnix:true}
+I0516 11:47:39.880426  105275 kubeadm.go:202] kubeadm config:
+apiVersion: kubeadm.k8s.io/v1beta4
+kind: InitConfiguration
+localAPIEndpoint:
+  advertiseAddress: 192.168.49.2
+  bindPort: 8443
+bootstrapTokens:
+  - groups:
+      - system:bootstrappers:kubeadm:default-node-token
+    ttl: 24h0m0s
+    usages:
+      - signing
+      - authentication
+nodeRegistration:
+  criSocket: unix:///var/run/cri-dockerd.sock
+  name: "cyclopousse-ha"
+  kubeletExtraArgs:
+    - name: "node-ip"
+      value: "192.168.49.2"
+  taints: []
+---
+apiVersion: kubeadm.k8s.io/v1beta4
+kind: ClusterConfiguration
+apiServer:
+  certSANs: ["127.0.0.1", "localhost", "192.168.49.2"]
+  extraArgs:
+    - name: "enable-admission-plugins"
+      value: "NamespaceLifecycle,LimitRanger,ServiceAccount,DefaultStorageClass,DefaultTolerationSeconds,NodeRestriction,MutatingAdmissionWebhook,ValidatingAdmissionWebhook,ResourceQuota"
+controllerManager:
+  extraArgs:
+    - name: "allocate-node-cidrs"
+      value: "true"
+    - name: "leader-elect"
+      value: "false"
+scheduler:
+  extraArgs:
+    - name: "leader-elect"
+      value: "false"
+certificatesDir: /var/lib/minikube/certs
+clusterName: mk
+controlPlaneEndpoint: control-plane.minikube.internal:8443
+etcd:
+  local:
+    dataDir: /var/lib/minikube/etcd
+kubernetesVersion: v1.35.1
+networking:
+  dnsDomain: cluster.local
+  podSubnet: "10.244.0.0/16"
+  serviceSubnet: 10.96.0.0/12
+---
+apiVersion: kubelet.config.k8s.io/v1beta1
+kind: KubeletConfiguration
+authentication:
+  x509:
+    clientCAFile: /var/lib/minikube/certs/ca.crt
+cgroupDriver: systemd
+containerRuntimeEndpoint: unix:///var/run/cri-dockerd.sock
+hairpinMode: hairpin-veth
+runtimeRequestTimeout: 15m
+clusterDomain: "cluster.local"
+# disable disk resource management by default
+imageGCHighThresholdPercent: 100
+evictionHard:
+  nodefs.available: "0%"
+  nodefs.inodesFree: "0%"
+  imagefs.available: "0%"
+failSwapOn: false
+staticPodPath: /etc/kubernetes/manifests
+---
+apiVersion: kubeproxy.config.k8s.io/v1alpha1
+kind: KubeProxyConfiguration
+clusterCIDR: "10.244.0.0/16"
+metricsBindAddress: 0.0.0.0:10249
+conntrack:
+  maxPerCore: 0
+# Skip setting "net.netfilter.nf_conntrack_tcp_timeout_established"
+  tcpEstablishedTimeout: 0s
+# Skip setting "net.netfilter.nf_conntrack_tcp_timeout_close"
+  tcpCloseWaitTimeout: 0s
+
+I0516 11:47:39.880522  105275 ssh_runner.go:194] Run: sudo ls /var/lib/minikube/binaries/v1.35.1
+I0516 11:47:39.908160  105275 binaries.go:50] Found k8s binaries, skipping transfer
+I0516 11:47:39.908246  105275 ssh_runner.go:194] Run: sudo mkdir -p /etc/systemd/system/kubelet.service.d /lib/systemd/system /var/tmp/minikube
+I0516 11:47:39.915654  105275 ssh_runner.go:361] scp memory --> /etc/systemd/system/kubelet.service.d/10-kubeadm.conf (313 bytes)
+I0516 11:47:39.928496  105275 ssh_runner.go:361] scp memory --> /lib/systemd/system/kubelet.service (352 bytes)
+I0516 11:47:39.941370  105275 ssh_runner.go:361] scp memory --> /var/tmp/minikube/kubeadm.yaml.new (2214 bytes)
+I0516 11:47:39.954338  105275 ssh_runner.go:194] Run: grep 192.168.49.2	control-plane.minikube.internal$ /etc/hosts
+I0516 11:47:39.957798  105275 ssh_runner.go:194] Run: /bin/bash -c "{ grep -v $'\tcontrol-plane.minikube.internal$' "/etc/hosts"; echo "192.168.49.2	control-plane.minikube.internal"; } > /tmp/h.$$; sudo cp /tmp/h.$$ "/etc/hosts""
+I0516 11:47:39.968094  105275 ssh_runner.go:194] Run: sudo systemctl daemon-reload
+I0516 11:47:40.080499  105275 ssh_runner.go:194] Run: sudo systemctl start kubelet
+I0516 11:47:40.126541  105275 certs.go:67] Setting up /home/emmanuel/.minikube/profiles/cyclopousse-ha for IP: 192.168.49.2
+I0516 11:47:40.126550  105275 certs.go:193] generating shared ca certs ...
+I0516 11:47:40.126563  105275 certs.go:225] acquiring lock for ca certs: {Name:mk8800a85dbf2b48dadfeda0f573a0e96f54f774 Timeout:1m0s Delay:500ms}
+I0516 11:47:40.126719  105275 certs.go:234] skipping valid "minikubeCA" ca cert: /home/emmanuel/.minikube/ca.key
+I0516 11:47:40.164538  105275 certs.go:234] skipping valid "proxyClientCA" ca cert: /home/emmanuel/.minikube/proxy-client-ca.key
+I0516 11:47:40.164563  105275 certs.go:255] generating profile certs ...
+I0516 11:47:40.164651  105275 certs.go:362] generating signed profile cert for "minikube-user": /home/emmanuel/.minikube/profiles/cyclopousse-ha/client.key
+I0516 11:47:40.164678  105275 crypto.go:70] Generating cert /home/emmanuel/.minikube/profiles/cyclopousse-ha/client.crt with IP's: []
+I0516 11:47:40.253253  105275 crypto.go:158] Writing cert to /home/emmanuel/.minikube/profiles/cyclopousse-ha/client.crt ...
+I0516 11:47:40.253265  105275 lock.go:61] WriteFile acquiring /home/emmanuel/.minikube/profiles/cyclopousse-ha/client.crt: {Name:mk9d152119d13cb2a523626d6c24d41fb4f6e593 Timeout:1m0s Delay:500ms}
+I0516 11:47:40.253387  105275 crypto.go:166] Writing key to /home/emmanuel/.minikube/profiles/cyclopousse-ha/client.key ...
+I0516 11:47:40.253393  105275 lock.go:61] WriteFile acquiring /home/emmanuel/.minikube/profiles/cyclopousse-ha/client.key: {Name:mkf1421cf95de4c4e7ba95e8f1033812eec51b72 Timeout:1m0s Delay:500ms}
+I0516 11:47:40.253461  105275 certs.go:362] generating signed profile cert for "minikube": /home/emmanuel/.minikube/profiles/cyclopousse-ha/apiserver.key.d8bdada2
+I0516 11:47:40.253472  105275 crypto.go:70] Generating cert /home/emmanuel/.minikube/profiles/cyclopousse-ha/apiserver.crt.d8bdada2 with IP's: [10.96.0.1 127.0.0.1 10.0.0.1 192.168.49.2]
+I0516 11:47:40.376075  105275 crypto.go:158] Writing cert to /home/emmanuel/.minikube/profiles/cyclopousse-ha/apiserver.crt.d8bdada2 ...
+I0516 11:47:40.376087  105275 lock.go:61] WriteFile acquiring /home/emmanuel/.minikube/profiles/cyclopousse-ha/apiserver.crt.d8bdada2: {Name:mka9d4f379766ed911838d6b02824cfc5e1c8d3e Timeout:1m0s Delay:500ms}
+I0516 11:47:40.376212  105275 crypto.go:166] Writing key to /home/emmanuel/.minikube/profiles/cyclopousse-ha/apiserver.key.d8bdada2 ...
+I0516 11:47:40.376220  105275 lock.go:61] WriteFile acquiring /home/emmanuel/.minikube/profiles/cyclopousse-ha/apiserver.key.d8bdada2: {Name:mkbe5f94110129ec7fdd9ca41e78959d243972ca Timeout:1m0s Delay:500ms}
+I0516 11:47:40.376284  105275 certs.go:380] copying /home/emmanuel/.minikube/profiles/cyclopousse-ha/apiserver.crt.d8bdada2 -> /home/emmanuel/.minikube/profiles/cyclopousse-ha/apiserver.crt
+I0516 11:47:40.376355  105275 certs.go:384] copying /home/emmanuel/.minikube/profiles/cyclopousse-ha/apiserver.key.d8bdada2 -> /home/emmanuel/.minikube/profiles/cyclopousse-ha/apiserver.key
+I0516 11:47:40.376416  105275 certs.go:362] generating signed profile cert for "aggregator": /home/emmanuel/.minikube/profiles/cyclopousse-ha/proxy-client.key
+I0516 11:47:40.376427  105275 crypto.go:70] Generating cert /home/emmanuel/.minikube/profiles/cyclopousse-ha/proxy-client.crt with IP's: []
+I0516 11:47:40.459871  105275 crypto.go:158] Writing cert to /home/emmanuel/.minikube/profiles/cyclopousse-ha/proxy-client.crt ...
+I0516 11:47:40.459883  105275 lock.go:61] WriteFile acquiring /home/emmanuel/.minikube/profiles/cyclopousse-ha/proxy-client.crt: {Name:mk12da84bb50a0509829664b0738f9e12c8fde0f Timeout:1m0s Delay:500ms}
+I0516 11:47:40.460035  105275 crypto.go:166] Writing key to /home/emmanuel/.minikube/profiles/cyclopousse-ha/proxy-client.key ...
+I0516 11:47:40.460042  105275 lock.go:61] WriteFile acquiring /home/emmanuel/.minikube/profiles/cyclopousse-ha/proxy-client.key: {Name:mka6d4e14f95327415bbe57d740a56c7a96ae58d Timeout:1m0s Delay:500ms}
+I0516 11:47:40.460202  105275 certs.go:482] found cert: /home/emmanuel/.minikube/certs/ca-key.pem (1675 bytes)
+I0516 11:47:40.460238  105275 certs.go:482] found cert: /home/emmanuel/.minikube/certs/ca.pem (1082 bytes)
+I0516 11:47:40.460263  105275 certs.go:482] found cert: /home/emmanuel/.minikube/certs/cert.pem (1127 bytes)
+I0516 11:47:40.460284  105275 certs.go:482] found cert: /home/emmanuel/.minikube/certs/key.pem (1675 bytes)
+I0516 11:47:40.460797  105275 ssh_runner.go:361] scp /home/emmanuel/.minikube/ca.crt --> /var/lib/minikube/certs/ca.crt (1111 bytes)
+I0516 11:47:40.479542  105275 ssh_runner.go:361] scp /home/emmanuel/.minikube/ca.key --> /var/lib/minikube/certs/ca.key (1679 bytes)
+I0516 11:47:40.499365  105275 ssh_runner.go:361] scp /home/emmanuel/.minikube/proxy-client-ca.crt --> /var/lib/minikube/certs/proxy-client-ca.crt (1119 bytes)
+I0516 11:47:40.517628  105275 ssh_runner.go:361] scp /home/emmanuel/.minikube/proxy-client-ca.key --> /var/lib/minikube/certs/proxy-client-ca.key (1679 bytes)
+I0516 11:47:40.535694  105275 ssh_runner.go:361] scp /home/emmanuel/.minikube/profiles/cyclopousse-ha/apiserver.crt --> /var/lib/minikube/certs/apiserver.crt (1419 bytes)
+I0516 11:47:40.553654  105275 ssh_runner.go:361] scp /home/emmanuel/.minikube/profiles/cyclopousse-ha/apiserver.key --> /var/lib/minikube/certs/apiserver.key (1675 bytes)
+I0516 11:47:40.572278  105275 ssh_runner.go:361] scp /home/emmanuel/.minikube/profiles/cyclopousse-ha/proxy-client.crt --> /var/lib/minikube/certs/proxy-client.crt (1147 bytes)
+I0516 11:47:40.591898  105275 ssh_runner.go:361] scp /home/emmanuel/.minikube/profiles/cyclopousse-ha/proxy-client.key --> /var/lib/minikube/certs/proxy-client.key (1679 bytes)
+I0516 11:47:40.610208  105275 ssh_runner.go:361] scp /home/emmanuel/.minikube/ca.crt --> /usr/share/ca-certificates/minikubeCA.pem (1111 bytes)
+I0516 11:47:40.628739  105275 ssh_runner.go:361] scp memory --> /var/lib/minikube/kubeconfig (722 bytes)
+I0516 11:47:40.659207  105275 ssh_runner.go:194] Run: openssl version
+I0516 11:47:40.699340  105275 ssh_runner.go:194] Run: sudo test -s /usr/share/ca-certificates/minikubeCA.pem
+I0516 11:47:40.707209  105275 ssh_runner.go:194] Run: sudo ln -fs /usr/share/ca-certificates/minikubeCA.pem /etc/ssl/certs/minikubeCA.pem
+I0516 11:47:40.727750  105275 ssh_runner.go:194] Run: ls -la /usr/share/ca-certificates/minikubeCA.pem
+I0516 11:47:40.731317  105275 certs.go:526] hashing: -rw-r--r-- 1 root root 1111 Mar 11 11:19 /usr/share/ca-certificates/minikubeCA.pem
+I0516 11:47:40.731370  105275 ssh_runner.go:194] Run: openssl x509 -hash -noout -in /usr/share/ca-certificates/minikubeCA.pem
+I0516 11:47:40.804611  105275 ssh_runner.go:194] Run: sudo test -L /etc/ssl/certs/b5213941.0
+I0516 11:47:40.812631  105275 ssh_runner.go:194] Run: sudo ln -fs /etc/ssl/certs/minikubeCA.pem /etc/ssl/certs/b5213941.0
+I0516 11:47:40.820964  105275 ssh_runner.go:194] Run: stat /var/lib/minikube/certs/apiserver-kubelet-client.crt
+I0516 11:47:40.824807  105275 certs.go:398] 'apiserver-kubelet-client' cert doesn't exist, likely first start: stat /var/lib/minikube/certs/apiserver-kubelet-client.crt: Process exited with status 1
+stdout:
+
+stderr:
+stat: cannot statx '/var/lib/minikube/certs/apiserver-kubelet-client.crt': No such file or directory
+I0516 11:47:40.824844  105275 kubeadm.go:400] StartCluster: {Name:cyclopousse-ha KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93 Memory:2800 CPUs:2 DiskSize:20000 Driver:docker HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:8443 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.35.1 ClusterName:cyclopousse-ha Namespace:default APIServerHAVIP: APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI:} Nodes:[{Name: IP:192.168.49.2 Port:8443 KubernetesVersion:v1.35.1 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:true ExtraDisks:0 CertExpiration:26280h0m0s MountString: Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false DisableCoreDNSLog:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP: SSHAuthSock: SSHAgentPID:0 GPUs: AutoPauseInterval:1m0s Rosetta:false}
+I0516 11:47:40.824937  105275 ssh_runner.go:194] Run: docker ps --filter status=paused --filter=name=k8s_.*_(kube-system)_ --format={{.ID}}
+I0516 11:47:40.862907  105275 ssh_runner.go:194] Run: sudo ls /var/lib/kubelet/kubeadm-flags.env /var/lib/kubelet/config.yaml /var/lib/minikube/etcd
+I0516 11:47:40.871009  105275 ssh_runner.go:194] Run: sudo cp /var/tmp/minikube/kubeadm.yaml.new /var/tmp/minikube/kubeadm.yaml
+I0516 11:47:40.879090  105275 kubeadm.go:214] ignoring SystemVerification for kubeadm because of docker driver
+I0516 11:47:40.879148  105275 ssh_runner.go:194] Run: sudo ls -la /etc/kubernetes/admin.conf /etc/kubernetes/kubelet.conf /etc/kubernetes/controller-manager.conf /etc/kubernetes/scheduler.conf
+I0516 11:47:40.888583  105275 kubeadm.go:155] config check failed, skipping stale config cleanup: sudo ls -la /etc/kubernetes/admin.conf /etc/kubernetes/kubelet.conf /etc/kubernetes/controller-manager.conf /etc/kubernetes/scheduler.conf: Process exited with status 2
+stdout:
+
+stderr:
+ls: cannot access '/etc/kubernetes/admin.conf': No such file or directory
+ls: cannot access '/etc/kubernetes/kubelet.conf': No such file or directory
+ls: cannot access '/etc/kubernetes/controller-manager.conf': No such file or directory
+ls: cannot access '/etc/kubernetes/scheduler.conf': No such file or directory
+I0516 11:47:40.888593  105275 kubeadm.go:157] found existing configuration files:
+
+I0516 11:47:40.888639  105275 ssh_runner.go:194] Run: sudo grep https://control-plane.minikube.internal:8443 /etc/kubernetes/admin.conf
+I0516 11:47:40.896692  105275 kubeadm.go:163] "https://control-plane.minikube.internal:8443" may not be in /etc/kubernetes/admin.conf - will remove: sudo grep https://control-plane.minikube.internal:8443 /etc/kubernetes/admin.conf: Process exited with status 2
+stdout:
+
+stderr:
+grep: /etc/kubernetes/admin.conf: No such file or directory
+I0516 11:47:40.896740  105275 ssh_runner.go:194] Run: sudo rm -f /etc/kubernetes/admin.conf
+I0516 11:47:40.904671  105275 ssh_runner.go:194] Run: sudo grep https://control-plane.minikube.internal:8443 /etc/kubernetes/kubelet.conf
+I0516 11:47:40.912564  105275 kubeadm.go:163] "https://control-plane.minikube.internal:8443" may not be in /etc/kubernetes/kubelet.conf - will remove: sudo grep https://control-plane.minikube.internal:8443 /etc/kubernetes/kubelet.conf: Process exited with status 2
+stdout:
+
+stderr:
+grep: /etc/kubernetes/kubelet.conf: No such file or directory
+I0516 11:47:40.912617  105275 ssh_runner.go:194] Run: sudo rm -f /etc/kubernetes/kubelet.conf
+I0516 11:47:40.920268  105275 ssh_runner.go:194] Run: sudo grep https://control-plane.minikube.internal:8443 /etc/kubernetes/controller-manager.conf
+I0516 11:47:40.927778  105275 kubeadm.go:163] "https://control-plane.minikube.internal:8443" may not be in /etc/kubernetes/controller-manager.conf - will remove: sudo grep https://control-plane.minikube.internal:8443 /etc/kubernetes/controller-manager.conf: Process exited with status 2
+stdout:
+
+stderr:
+grep: /etc/kubernetes/controller-manager.conf: No such file or directory
+I0516 11:47:40.927832  105275 ssh_runner.go:194] Run: sudo rm -f /etc/kubernetes/controller-manager.conf
+I0516 11:47:40.935187  105275 ssh_runner.go:194] Run: sudo grep https://control-plane.minikube.internal:8443 /etc/kubernetes/scheduler.conf
+I0516 11:47:40.943553  105275 kubeadm.go:163] "https://control-plane.minikube.internal:8443" may not be in /etc/kubernetes/scheduler.conf - will remove: sudo grep https://control-plane.minikube.internal:8443 /etc/kubernetes/scheduler.conf: Process exited with status 2
+stdout:
+
+stderr:
+grep: /etc/kubernetes/scheduler.conf: No such file or directory
+I0516 11:47:40.943613  105275 ssh_runner.go:194] Run: sudo rm -f /etc/kubernetes/scheduler.conf
+I0516 11:47:40.951128  105275 ssh_runner.go:285] Start: sudo /bin/bash -c "env PATH="/var/lib/minikube/binaries/v1.35.1:$PATH" kubeadm init --config /var/tmp/minikube/kubeadm.yaml  --ignore-preflight-errors=DirAvailable--etc-kubernetes-manifests,DirAvailable--var-lib-minikube,DirAvailable--var-lib-minikube-etcd,FileAvailable--etc-kubernetes-manifests-kube-scheduler.yaml,FileAvailable--etc-kubernetes-manifests-kube-apiserver.yaml,FileAvailable--etc-kubernetes-manifests-kube-controller-manager.yaml,FileAvailable--etc-kubernetes-manifests-etcd.yaml,Port-10250,Swap,NumCPU,Mem,SystemVerification,FileContent--proc-sys-net-bridge-bridge-nf-call-iptables"
+I0516 11:47:41.003550  105275 kubeadm.go:318] [init] Using Kubernetes version: v1.35.1
+I0516 11:47:41.003764  105275 kubeadm.go:318] [preflight] Running pre-flight checks
+I0516 11:47:41.120124  105275 kubeadm.go:318] [preflight] The system verification failed. Printing the output from the verification:
+I0516 11:47:41.120197  105275 kubeadm.go:318] [0;37mKERNEL_VERSION[0m: [0;32m6.1.0-44-amd64[0m
+I0516 11:47:41.120232  105275 kubeadm.go:318] [0;37mOS[0m: [0;32mLinux[0m
+I0516 11:47:41.120287  105275 kubeadm.go:318] [0;37mCGROUPS_CPU[0m: [0;32menabled[0m
+I0516 11:47:41.120368  105275 kubeadm.go:318] [0;37mCGROUPS_CPUSET[0m: [0;32menabled[0m
+I0516 11:47:41.120425  105275 kubeadm.go:318] [0;37mCGROUPS_DEVICES[0m: [0;32menabled[0m
+I0516 11:47:41.120474  105275 kubeadm.go:318] [0;37mCGROUPS_FREEZER[0m: [0;32menabled[0m
+I0516 11:47:41.120521  105275 kubeadm.go:318] [0;37mCGROUPS_MEMORY[0m: [0;32menabled[0m
+I0516 11:47:41.120562  105275 kubeadm.go:318] [0;37mCGROUPS_PIDS[0m: [0;32menabled[0m
+I0516 11:47:41.120612  105275 kubeadm.go:318] [0;37mCGROUPS_HUGETLB[0m: [0;32menabled[0m
+I0516 11:47:41.120651  105275 kubeadm.go:318] [0;37mCGROUPS_IO[0m: [0;32menabled[0m
+I0516 11:47:41.174819  105275 kubeadm.go:318] [preflight] Pulling images required for setting up a Kubernetes cluster
+I0516 11:47:41.174960  105275 kubeadm.go:318] [preflight] This might take a minute or two, depending on the speed of your internet connection
+I0516 11:47:41.175103  105275 kubeadm.go:318] [preflight] You can also perform this action beforehand using 'kubeadm config images pull'
+I0516 11:47:41.185178  105275 kubeadm.go:318] [certs] Using certificateDir folder "/var/lib/minikube/certs"
+I0516 11:47:41.274414  105275 out.go:252]     ▪ Génération des certificats et des clés
+I0516 11:47:41.274548  105275 kubeadm.go:318] [certs] Using existing ca certificate authority
+I0516 11:47:41.274620  105275 kubeadm.go:318] [certs] Using existing apiserver certificate and key on disk
+I0516 11:47:41.274692  105275 kubeadm.go:318] [certs] Generating "apiserver-kubelet-client" certificate and key
+I0516 11:47:41.318622  105275 kubeadm.go:318] [certs] Generating "front-proxy-ca" certificate and key
+I0516 11:47:41.397630  105275 kubeadm.go:318] [certs] Generating "front-proxy-client" certificate and key
+I0516 11:47:41.458846  105275 kubeadm.go:318] [certs] Generating "etcd/ca" certificate and key
+I0516 11:47:41.573120  105275 kubeadm.go:318] [certs] Generating "etcd/server" certificate and key
+I0516 11:47:41.573326  105275 kubeadm.go:318] [certs] etcd/server serving cert is signed for DNS names [cyclopousse-ha localhost] and IPs [192.168.49.2 127.0.0.1 ::1]
+I0516 11:47:41.626082  105275 kubeadm.go:318] [certs] Generating "etcd/peer" certificate and key
+I0516 11:47:41.626234  105275 kubeadm.go:318] [certs] etcd/peer serving cert is signed for DNS names [cyclopousse-ha localhost] and IPs [192.168.49.2 127.0.0.1 ::1]
+I0516 11:47:41.857594  105275 kubeadm.go:318] [certs] Generating "etcd/healthcheck-client" certificate and key
+I0516 11:47:41.903783  105275 kubeadm.go:318] [certs] Generating "apiserver-etcd-client" certificate and key
+I0516 11:47:42.024112  105275 kubeadm.go:318] [certs] Generating "sa" key and public key
+I0516 11:47:42.024285  105275 kubeadm.go:318] [kubeconfig] Using kubeconfig folder "/etc/kubernetes"
+I0516 11:47:42.216599  105275 kubeadm.go:318] [kubeconfig] Writing "admin.conf" kubeconfig file
+I0516 11:47:42.302191  105275 kubeadm.go:318] [kubeconfig] Writing "super-admin.conf" kubeconfig file
+I0516 11:47:42.807228  105275 kubeadm.go:318] [kubeconfig] Writing "kubelet.conf" kubeconfig file
+I0516 11:47:42.847535  105275 kubeadm.go:318] [kubeconfig] Writing "controller-manager.conf" kubeconfig file
+I0516 11:47:42.950548  105275 kubeadm.go:318] [kubeconfig] Writing "scheduler.conf" kubeconfig file
+I0516 11:47:42.951170  105275 kubeadm.go:318] [etcd] Creating static Pod manifest for local etcd in "/etc/kubernetes/manifests"
+I0516 11:47:42.953237  105275 kubeadm.go:318] [control-plane] Using manifest folder "/etc/kubernetes/manifests"
+I0516 11:47:43.010291  105275 out.go:252]     ▪ Démarrage du plan de contrôle ...
+I0516 11:47:43.010478  105275 kubeadm.go:318] [control-plane] Creating static Pod manifest for "kube-apiserver"
+I0516 11:47:43.010586  105275 kubeadm.go:318] [control-plane] Creating static Pod manifest for "kube-controller-manager"
+I0516 11:47:43.010670  105275 kubeadm.go:318] [control-plane] Creating static Pod manifest for "kube-scheduler"
+I0516 11:47:43.010794  105275 kubeadm.go:318] [kubelet-start] Writing kubelet environment file with flags to file "/var/lib/kubelet/kubeadm-flags.env"
+I0516 11:47:43.010927  105275 kubeadm.go:318] [kubelet-start] Writing kubelet configuration to file "/var/lib/kubelet/instance-config.yaml"
+I0516 11:47:43.011061  105275 kubeadm.go:318] [patches] Applied patch of type "application/strategic-merge-patch+json" to target "kubeletconfiguration"
+I0516 11:47:43.011159  105275 kubeadm.go:318] [kubelet-start] Writing kubelet configuration to file "/var/lib/kubelet/config.yaml"
+I0516 11:47:43.011207  105275 kubeadm.go:318] [kubelet-start] Starting the kubelet
+I0516 11:47:43.140075  105275 kubeadm.go:318] [wait-control-plane] Waiting for the kubelet to boot up the control plane as static Pods from directory "/etc/kubernetes/manifests"
+I0516 11:47:43.140322  105275 kubeadm.go:318] [kubelet-check] Waiting for a healthy kubelet at http://127.0.0.1:10248/healthz. This can take up to 4m0s
+I0516 11:47:43.641578  105275 kubeadm.go:318] [kubelet-check] The kubelet is healthy after 501.600368ms
+I0516 11:47:43.644826  105275 kubeadm.go:318] [control-plane-check] Waiting for healthy control plane components. This can take up to 4m0s
+I0516 11:47:43.644987  105275 kubeadm.go:318] [control-plane-check] Checking kube-apiserver at https://192.168.49.2:8443/livez
+I0516 11:47:43.645115  105275 kubeadm.go:318] [control-plane-check] Checking kube-controller-manager at https://127.0.0.1:10257/healthz
+I0516 11:47:43.645210  105275 kubeadm.go:318] [control-plane-check] Checking kube-scheduler at https://127.0.0.1:10259/livez
+I0516 11:47:55.157876  105275 kubeadm.go:318] [control-plane-check] kube-controller-manager is healthy after 11.511971262s
+I0516 11:47:57.166967  105275 kubeadm.go:318] [control-plane-check] kube-scheduler is healthy after 13.522128737s
+I0516 11:48:12.152582  105275 kubeadm.go:318] [control-plane-check] kube-apiserver is healthy after 28.507097169s
+I0516 11:48:12.231409  105275 kubeadm.go:318] [upload-config] Storing the configuration used in ConfigMap "kubeadm-config" in the "kube-system" Namespace
+I0516 11:48:12.443541  105275 kubeadm.go:318] [kubelet] Creating a ConfigMap "kubelet-config" in namespace kube-system with the configuration for the kubelets in the cluster
+I0516 11:48:12.685652  105275 kubeadm.go:318] [upload-certs] Skipping phase. Please see --upload-certs
+I0516 11:48:12.685877  105275 kubeadm.go:318] [mark-control-plane] Marking the node cyclopousse-ha as control-plane by adding the labels: [node-role.kubernetes.io/control-plane node.kubernetes.io/exclude-from-external-load-balancers]
+I0516 11:48:12.873855  105275 kubeadm.go:318] [bootstrap-token] Using token: 6sd4km.z6ievfzemb6e5w92
+I0516 11:48:13.054768  105275 out.go:252]     ▪ Configuration des règles RBAC ...
+I0516 11:48:13.055409  105275 kubeadm.go:318] [bootstrap-token] Configuring bootstrap tokens, cluster-info ConfigMap, RBAC Roles
+I0516 11:48:13.159885  105275 kubeadm.go:318] [bootstrap-token] Configured RBAC rules to allow Node Bootstrap tokens to get nodes
+I0516 11:48:13.225246  105275 kubeadm.go:318] [bootstrap-token] Configured RBAC rules to allow Node Bootstrap tokens to post CSRs in order for nodes to get long term certificate credentials
+I0516 11:48:13.374683  105275 kubeadm.go:318] [bootstrap-token] Configured RBAC rules to allow the csrapprover controller automatically approve CSRs from a Node Bootstrap Token
+I0516 11:48:13.407247  105275 kubeadm.go:318] [bootstrap-token] Configured RBAC rules to allow certificate rotation for all node client certificates in the cluster
+I0516 11:48:13.440658  105275 kubeadm.go:318] [bootstrap-token] Creating the "cluster-info" ConfigMap in the "kube-public" namespace
+I0516 11:48:13.676491  105275 kubeadm.go:318] [kubelet-finalize] Updating "/etc/kubernetes/kubelet.conf" to point to a rotatable kubelet client certificate and key
+I0516 11:48:14.697282  105275 kubeadm.go:318] [addons] Applied essential addon: CoreDNS
+I0516 11:48:15.079157  105275 kubeadm.go:318] [addons] Applied essential addon: kube-proxy
+I0516 11:48:15.084295  105275 kubeadm.go:318] 
+I0516 11:48:15.084612  105275 kubeadm.go:318] Your Kubernetes control-plane has initialized successfully!
+I0516 11:48:15.084659  105275 kubeadm.go:318] 
+I0516 11:48:15.085034  105275 kubeadm.go:318] To start using your cluster, you need to run the following as a regular user:
+I0516 11:48:15.085072  105275 kubeadm.go:318] 
+I0516 11:48:15.085201  105275 kubeadm.go:318]   mkdir -p $HOME/.kube
+I0516 11:48:15.085456  105275 kubeadm.go:318]   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+I0516 11:48:15.085712  105275 kubeadm.go:318]   sudo chown $(id -u):$(id -g) $HOME/.kube/config
+I0516 11:48:15.085726  105275 kubeadm.go:318] 
+I0516 11:48:15.085998  105275 kubeadm.go:318] Alternatively, if you are the root user, you can run:
+I0516 11:48:15.086012  105275 kubeadm.go:318] 
+I0516 11:48:15.086263  105275 kubeadm.go:318]   export KUBECONFIG=/etc/kubernetes/admin.conf
+I0516 11:48:15.086275  105275 kubeadm.go:318] 
+I0516 11:48:15.086501  105275 kubeadm.go:318] You should now deploy a pod network to the cluster.
+I0516 11:48:15.086821  105275 kubeadm.go:318] Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
+I0516 11:48:15.087063  105275 kubeadm.go:318]   https://kubernetes.io/docs/concepts/cluster-administration/addons/
+I0516 11:48:15.087072  105275 kubeadm.go:318] 
+I0516 11:48:15.087391  105275 kubeadm.go:318] You can now join any number of control-plane nodes by copying certificate authorities
+I0516 11:48:15.087782  105275 kubeadm.go:318] and service account keys on each node and then running the following as root:
+I0516 11:48:15.087791  105275 kubeadm.go:318] 
+I0516 11:48:15.088138  105275 kubeadm.go:318]   kubeadm join control-plane.minikube.internal:8443 --token 6sd4km.z6ievfzemb6e5w92 \
+I0516 11:48:15.088479  105275 kubeadm.go:318] 	--discovery-token-ca-cert-hash sha256:5a1cbb5227eb8f7d3fc82267392e310effe24c83678398ce708d3cdd7e8f86ff \
+I0516 11:48:15.088545  105275 kubeadm.go:318] 	--control-plane 
+I0516 11:48:15.088553  105275 kubeadm.go:318] 
+I0516 11:48:15.088805  105275 kubeadm.go:318] Then you can join any number of worker nodes by running the following on each as root:
+I0516 11:48:15.088819  105275 kubeadm.go:318] 
+I0516 11:48:15.089042  105275 kubeadm.go:318] kubeadm join control-plane.minikube.internal:8443 --token 6sd4km.z6ievfzemb6e5w92 \
+I0516 11:48:15.089342  105275 kubeadm.go:318] 	--discovery-token-ca-cert-hash sha256:5a1cbb5227eb8f7d3fc82267392e310effe24c83678398ce708d3cdd7e8f86ff 
+I0516 11:48:15.091520  105275 kubeadm.go:318] 	[WARNING Swap]: swap is supported for cgroup v2 only. The kubelet must be properly configured to use swap. Please refer to https://kubernetes.io/docs/concepts/architecture/nodes/#swap-memory, or disable swap on the node
+I0516 11:48:15.091968  105275 kubeadm.go:318] 	[WARNING SystemVerification]: failed to parse kernel config: unable to load kernel module: "configs", output: "modprobe: FATAL: Module configs not found in directory /lib/modules/6.1.0-44-amd64\n", err: exit status 1
+I0516 11:48:15.092177  105275 kubeadm.go:318] 	[WARNING Service-kubelet]: kubelet service is not enabled, please run 'systemctl enable kubelet.service'
+I0516 11:48:15.092206  105275 cni.go:83] Creating CNI manager for ""
+I0516 11:48:15.092214  105275 cni.go:135] multinode detected (1 nodes found), recommending kindnet
+I0516 11:48:15.319073  105275 out.go:179] 🔗  Configuration de CNI (Container Networking Interface)...
+I0516 11:48:15.417428  105275 ssh_runner.go:194] Run: stat /opt/cni/bin/portmap
+I0516 11:48:15.427845  105275 cni.go:181] applying CNI manifest using /var/lib/minikube/binaries/v1.35.1/kubectl ...
+I0516 11:48:15.427861  105275 ssh_runner.go:361] scp memory --> /var/tmp/minikube/cni.yaml (2601 bytes)
+I0516 11:48:15.444648  105275 ssh_runner.go:194] Run: sudo /var/lib/minikube/binaries/v1.35.1/kubectl apply --kubeconfig=/var/lib/minikube/kubeconfig -f /var/tmp/minikube/cni.yaml
+I0516 11:48:16.303197  105275 ssh_runner.go:194] Run: /bin/bash -c "cat /proc/$(pgrep kube-apiserver)/oom_adj"
+I0516 11:48:16.303482  105275 ssh_runner.go:194] Run: sudo /var/lib/minikube/binaries/v1.35.1/kubectl create clusterrolebinding minikube-rbac --clusterrole=cluster-admin --serviceaccount=kube-system:default --kubeconfig=/var/lib/minikube/kubeconfig
+I0516 11:48:16.303705  105275 ssh_runner.go:194] Run: sudo /var/lib/minikube/binaries/v1.35.1/kubectl --kubeconfig=/var/lib/minikube/kubeconfig label --overwrite nodes cyclopousse-ha minikube.k8s.io/updated_at=2026_05_16T11_48_16_0700 minikube.k8s.io/version=v1.38.1 minikube.k8s.io/commit=c93a4cb9311efc66b90d33ea03f75f2c4120e9b0 minikube.k8s.io/name=cyclopousse-ha minikube.k8s.io/primary=true
+I0516 11:48:16.392334  105275 ops.go:34] apiserver oom_adj: -16
+I0516 11:48:16.480072  105275 kubeadm.go:1113] duration metric: took 176.717422ms to wait for elevateKubeSystemPrivileges
+I0516 11:48:16.519849  105275 kubeadm.go:402] duration metric: took 35.694999822s to StartCluster
+I0516 11:48:16.519869  105275 settings.go:141] acquiring lock: {Name:mk10eb8dd32eded7f6dcd1624285170c71783f84 Timeout:1m0s Delay:500ms}
+I0516 11:48:16.519939  105275 settings.go:149] Updating kubeconfig:  /home/emmanuel/.kube/config
+I0516 11:48:16.520454  105275 lock.go:61] WriteFile acquiring /home/emmanuel/.kube/config: {Name:mkfabd3384c9e29d61262e555ebb874e32df2164 Timeout:1m0s Delay:500ms}
+I0516 11:48:16.520641  105275 ssh_runner.go:194] Run: /bin/bash -c "sudo /var/lib/minikube/binaries/v1.35.1/kubectl --kubeconfig=/var/lib/minikube/kubeconfig -n kube-system get configmap coredns -o yaml"
+I0516 11:48:16.520648  105275 start.go:237] Will wait 6m0s for node &{Name: IP:192.168.49.2 Port:8443 KubernetesVersion:v1.35.1 ContainerRuntime:docker ControlPlane:true Worker:true}
+I0516 11:48:16.520702  105275 addons.go:528] enable addons start: toEnable=map[ambassador:false amd-gpu-device-plugin:false auto-pause:false cloud-spanner:false csi-hostpath-driver:false dashboard:false default-storageclass:true efk:false freshpod:false gcp-auth:false gvisor:false headlamp:false inaccel:false ingress:false ingress-dns:false inspektor-gadget:false istio:false istio-provisioner:false kong:false kubeflow:false kubetail:false kubevirt:false logviewer:false metallb:false metrics-server:false nvidia-device-plugin:false nvidia-driver-installer:false nvidia-gpu-device-plugin:false olm:false pod-security-policy:false portainer:false registry:false registry-aliases:false registry-creds:false storage-provisioner:true storage-provisioner-rancher:false volcano:false volumesnapshots:false yakd:false]
+I0516 11:48:16.520782  105275 addons.go:71] Setting storage-provisioner=true in profile "cyclopousse-ha"
+I0516 11:48:16.520798  105275 addons.go:240] Setting addon storage-provisioner=true in "cyclopousse-ha"
+I0516 11:48:16.520818  105275 config.go:183] Loaded profile config "cyclopousse-ha": Driver=docker, ContainerRuntime=docker, KubernetesVersion=v1.35.1
+I0516 11:48:16.520825  105275 host.go:67] Checking if "cyclopousse-ha" exists ...
+I0516 11:48:16.520854  105275 addons.go:71] Setting default-storageclass=true in profile "cyclopousse-ha"
+I0516 11:48:16.520865  105275 addons_storage_classes.go:34] enableOrDisableStorageClasses default-storageclass=true on "cyclopousse-ha"
+I0516 11:48:16.521156  105275 cli_runner.go:164] Run: docker container inspect cyclopousse-ha --format={{.State.Status}}
+I0516 11:48:16.521259  105275 cli_runner.go:164] Run: docker container inspect cyclopousse-ha --format={{.State.Status}}
+I0516 11:48:16.700673  105275 out.go:179] 🔎  Vérification des composants Kubernetes...
+I0516 11:48:16.808040  105275 out.go:179]     ▪ Utilisation de l'image gcr.io/k8s-minikube/storage-provisioner:v5
+I0516 11:48:16.918996  105275 ssh_runner.go:194] Run: sudo systemctl daemon-reload
+I0516 11:48:16.928165  105275 ssh_runner.go:194] Run: /bin/bash -c "sudo /var/lib/minikube/binaries/v1.35.1/kubectl --kubeconfig=/var/lib/minikube/kubeconfig -n kube-system get configmap coredns -o yaml | sed -e '/^        forward . \/etc\/resolv.conf.*/i \        hosts {\n           192.168.49.1 host.minikube.internal\n           fallthrough\n        }' -e '/^        errors *$/i \        log' | sudo /var/lib/minikube/binaries/v1.35.1/kubectl --kubeconfig=/var/lib/minikube/kubeconfig replace -f -"
+I0516 11:48:16.986082  105275 addons.go:437] installing /etc/kubernetes/addons/storage-provisioner.yaml
+I0516 11:48:16.986095  105275 ssh_runner.go:361] scp memory --> /etc/kubernetes/addons/storage-provisioner.yaml (2676 bytes)
+I0516 11:48:16.986169  105275 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" cyclopousse-ha
+I0516 11:48:17.042579  105275 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:32787 SSHKeyPath:/home/emmanuel/.minikube/machines/cyclopousse-ha/id_rsa Username:docker}
+I0516 11:48:17.116483  105275 ssh_runner.go:194] Run: sudo systemctl start kubelet
+I0516 11:48:17.154661  105275 ssh_runner.go:194] Run: sudo KUBECONFIG=/var/lib/minikube/kubeconfig /var/lib/minikube/binaries/v1.35.1/kubectl apply -f /etc/kubernetes/addons/storage-provisioner.yaml
+I0516 11:48:17.345605  105275 start.go:995] {"host.minikube.internal": 192.168.49.1} host record injected into CoreDNS's ConfigMap
+I0516 11:48:17.444103  105275 addons.go:240] Setting addon default-storageclass=true in "cyclopousse-ha"
+I0516 11:48:17.444138  105275 api_server.go:51] waiting for apiserver process to appear ...
+I0516 11:48:17.444146  105275 host.go:67] Checking if "cyclopousse-ha" exists ...
+I0516 11:48:17.444212  105275 ssh_runner.go:194] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+I0516 11:48:17.444688  105275 cli_runner.go:164] Run: docker container inspect cyclopousse-ha --format={{.State.Status}}
+I0516 11:48:17.526931  105275 addons.go:437] installing /etc/kubernetes/addons/storageclass.yaml
+I0516 11:48:17.526947  105275 ssh_runner.go:361] scp storageclass/storageclass.yaml --> /etc/kubernetes/addons/storageclass.yaml (271 bytes)
+I0516 11:48:17.527010  105275 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" cyclopousse-ha
+I0516 11:48:17.549485  105275 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:32787 SSHKeyPath:/home/emmanuel/.minikube/machines/cyclopousse-ha/id_rsa Username:docker}
+I0516 11:48:17.654118  105275 ssh_runner.go:194] Run: sudo KUBECONFIG=/var/lib/minikube/kubeconfig /var/lib/minikube/binaries/v1.35.1/kubectl apply -f /etc/kubernetes/addons/storageclass.yaml
+I0516 11:48:18.046234  105275 kapi.go:214] "coredns" deployment in "kube-system" namespace and "cyclopousse-ha" context rescaled to 1 replicas
+I0516 11:48:18.191460  105275 ssh_runner.go:234] Completed: sudo KUBECONFIG=/var/lib/minikube/kubeconfig /var/lib/minikube/binaries/v1.35.1/kubectl apply -f /etc/kubernetes/addons/storage-provisioner.yaml: (1.036765431s)
+I0516 11:48:18.191553  105275 api_server.go:71] duration metric: took 1.670882819s to wait for apiserver process to appear ...
+I0516 11:48:18.191562  105275 api_server.go:87] waiting for apiserver healthz status ...
+I0516 11:48:18.191581  105275 api_server.go:298] Checking apiserver healthz at https://192.168.49.2:8443/healthz ...
+I0516 11:48:18.265745  105275 api_server.go:324] https://192.168.49.2:8443/healthz returned 200:
+ok
+I0516 11:48:18.268292  105275 api_server.go:140] control plane version: v1.35.1
+I0516 11:48:18.268326  105275 api_server.go:130] duration metric: took 76.751681ms to wait for apiserver health ...
+I0516 11:48:18.268343  105275 system_pods.go:42] waiting for kube-system pods to appear ...
+I0516 11:48:18.619857  105275 out.go:179] 🌟  Modules activés: storage-provisioner, default-storageclass
+I0516 11:48:18.778724  105275 addons.go:531] duration metric: took 2.25801116s for enable addons: enabled=[storage-provisioner default-storageclass]
+I0516 11:48:18.827509  105275 system_pods.go:58] 5 kube-system pods found
+I0516 11:48:18.827544  105275 system_pods.go:60] "etcd-cyclopousse-ha" [d0792e9a-544e-4610-912d-a0f8e5691c3e] Running
+I0516 11:48:18.827551  105275 system_pods.go:60] "kube-apiserver-cyclopousse-ha" [b755f60f-29ef-4020-abfc-1acb530f33ac] Running
+I0516 11:48:18.827555  105275 system_pods.go:60] "kube-controller-manager-cyclopousse-ha" [1b00437f-1f8d-4e96-a88a-a5ce7570e705] Running
+I0516 11:48:18.827559  105275 system_pods.go:60] "kube-scheduler-cyclopousse-ha" [9e03fc50-6981-433c-8b76-19df5ddc3839] Running
+I0516 11:48:18.827565  105275 system_pods.go:60] "storage-provisioner" [cf5ec447-bb5d-4758-ab70-fd494e7eba02] Pending: PodScheduled:Unschedulable (0/1 nodes are available: 1 node(s) had untolerated taint(s). no new claims to deallocate, preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.)
+I0516 11:48:18.827571  105275 system_pods.go:73] duration metric: took 559.219975ms to wait for pod list to return data ...
+I0516 11:48:18.827584  105275 kubeadm.go:586] duration metric: took 2.306914434s to wait for: map[apiserver:true system_pods:true]
+I0516 11:48:18.827641  105275 node_conditions.go:101] verifying NodePressure condition ...
+I0516 11:48:18.868817  105275 node_conditions.go:121] node storage ephemeral capacity is 238269176Ki
+I0516 11:48:18.868863  105275 node_conditions.go:122] node cpu capacity is 4
+I0516 11:48:18.868886  105275 node_conditions.go:104] duration metric: took 41.236602ms to run NodePressure ...
+I0516 11:48:18.868914  105275 start.go:243] waiting for startup goroutines ...
+I0516 11:48:18.868936  105275 start.go:248] waiting for cluster config update ...
+I0516 11:48:18.868963  105275 start.go:257] writing updated cluster config ...
+I0516 11:48:18.979302  105275 out.go:203] 
+I0516 11:48:19.091667  105275 config.go:183] Loaded profile config "cyclopousse-ha": Driver=docker, ContainerRuntime=docker, KubernetesVersion=v1.35.1
+I0516 11:48:19.092222  105275 profile.go:143] Saving config to /home/emmanuel/.minikube/profiles/cyclopousse-ha/config.json ...
+I0516 11:48:19.180333  105275 out.go:179] 👍  Démarrage du nœud "cyclopousse-ha-m02" worker dans le cluster "cyclopousse-ha"
+I0516 11:48:19.225029  105275 cache.go:135] Beginning downloading kic base image for docker with docker
+I0516 11:48:19.308874  105275 out.go:179] 🚜  Extraction de l'image de base v0.0.50...
+I0516 11:48:19.398087  105275 image.go:82] Checking for gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93 in local docker daemon
+I0516 11:48:19.398087  105275 preload.go:187] Checking if preload exists for k8s version v1.35.1 and runtime docker
+I0516 11:48:19.398118  105275 cache.go:66] Caching tarball of preloaded images
+I0516 11:48:19.398373  105275 preload.go:250] Found /home/emmanuel/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v18-v1.35.1-docker-overlay2-amd64.tar.lz4 in cache, skipping download
+I0516 11:48:19.398415  105275 cache.go:69] Finished verifying existence of preloaded tar for v1.35.1 on docker
+I0516 11:48:19.398684  105275 profile.go:143] Saving config to /home/emmanuel/.minikube/profiles/cyclopousse-ha/config.json ...
+I0516 11:48:19.729897  105275 image.go:101] Found gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93 in local docker daemon, skipping pull
+I0516 11:48:19.729905  105275 cache.go:159] gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93 exists in daemon, skipping load
+I0516 11:48:19.729917  105275 cache.go:244] Successfully downloaded all kic artifacts
+I0516 11:48:19.729935  105275 start.go:359] acquireMachinesLock for cyclopousse-ha-m02: {Name:mkf19014e1b335ca22d69659b68354f4ea2c8590 Timeout:10m0s Delay:500ms}
+I0516 11:48:19.729992  105275 start.go:363] duration metric: took 48.263µs to acquireMachinesLock for "cyclopousse-ha-m02"
+I0516 11:48:19.730003  105275 start.go:92] Provisioning new machine with config: &{Name:cyclopousse-ha KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93 Memory:2800 CPUs:2 DiskSize:20000 Driver:docker HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:8443 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.35.1 ClusterName:cyclopousse-ha Namespace:default APIServerHAVIP: APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI:} Nodes:[{Name: IP:192.168.49.2 Port:8443 KubernetesVersion:v1.35.1 ContainerRuntime:docker ControlPlane:true Worker:true} {Name:m02 IP: Port:8443 KubernetesVersion:v1.35.1 ContainerRuntime:docker ControlPlane:false Worker:true}] Addons:map[default-storageclass:true storage-provisioner:true] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:true ExtraDisks:0 CertExpiration:26280h0m0s MountString: Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false DisableCoreDNSLog:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP: SSHAuthSock: SSHAgentPID:0 GPUs: AutoPauseInterval:1m0s Rosetta:false} &{Name:m02 IP: Port:8443 KubernetesVersion:v1.35.1 ContainerRuntime:docker ControlPlane:false Worker:true}
+I0516 11:48:19.730048  105275 start.go:124] createHost starting for "m02" (driver="docker")
+I0516 11:48:19.872096  105275 out.go:252] 🔥  Création de docker container (CPU=2, Memory=2800Mo) ...
+I0516 11:48:19.872482  105275 start.go:158] libmachine.API.Create for "cyclopousse-ha" (driver="docker")
+I0516 11:48:19.872570  105275 client.go:173] LocalClient.Create starting
+I0516 11:48:19.872761  105275 main.go:144] libmachine: Reading certificate data from /home/emmanuel/.minikube/certs/ca.pem
+I0516 11:48:19.872860  105275 main.go:144] libmachine: Decoding PEM data...
+I0516 11:48:19.872911  105275 main.go:144] libmachine: Parsing certificate...
+I0516 11:48:19.873077  105275 main.go:144] libmachine: Reading certificate data from /home/emmanuel/.minikube/certs/cert.pem
+I0516 11:48:19.873164  105275 main.go:144] libmachine: Decoding PEM data...
+I0516 11:48:19.873221  105275 main.go:144] libmachine: Parsing certificate...
+I0516 11:48:19.874118  105275 cli_runner.go:164] Run: docker network inspect cyclopousse-ha --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}"
+I0516 11:48:19.915446  105275 network_create.go:78] Found existing network {name:cyclopousse-ha subnet:0xc00199f680 gateway:[0 0 0 0 0 0 0 0 0 0 255 255 192 168 49 1] mtu:1500}
+I0516 11:48:19.915468  105275 kic.go:120] calculated static IP "192.168.49.3" for the "cyclopousse-ha-m02" container
+I0516 11:48:19.915543  105275 cli_runner.go:164] Run: docker ps -a --format {{.Names}}
+I0516 11:48:19.938800  105275 cli_runner.go:164] Run: docker volume create cyclopousse-ha-m02 --label name.minikube.sigs.k8s.io=cyclopousse-ha-m02 --label created_by.minikube.sigs.k8s.io=true
+I0516 11:48:20.105291  105275 oci.go:102] Successfully created a docker volume cyclopousse-ha-m02
+I0516 11:48:20.105368  105275 cli_runner.go:164] Run: docker run --rm --name cyclopousse-ha-m02-preload-sidecar --label created_by.minikube.sigs.k8s.io=true --label name.minikube.sigs.k8s.io=cyclopousse-ha-m02 --entrypoint /usr/bin/test -v cyclopousse-ha-m02:/var gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93 -d /var/lib
+I0516 11:48:32.652323  105275 cli_runner.go:217] Completed: docker run --rm --name cyclopousse-ha-m02-preload-sidecar --label created_by.minikube.sigs.k8s.io=true --label name.minikube.sigs.k8s.io=cyclopousse-ha-m02 --entrypoint /usr/bin/test -v cyclopousse-ha-m02:/var gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93 -d /var/lib: (12.546922764s)
+I0516 11:48:32.652337  105275 oci.go:106] Successfully prepared a docker volume cyclopousse-ha-m02
+I0516 11:48:32.652366  105275 preload.go:187] Checking if preload exists for k8s version v1.35.1 and runtime docker
+I0516 11:48:32.652374  105275 kic.go:193] Starting extracting preloaded images to volume ...
+I0516 11:48:32.652447  105275 cli_runner.go:164] Run: docker run --rm --entrypoint /usr/bin/tar -v /home/emmanuel/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v18-v1.35.1-docker-overlay2-amd64.tar.lz4:/preloaded.tar:ro -v cyclopousse-ha-m02:/extractDir gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93 -I lz4 -xf /preloaded.tar -C /extractDir
+I0516 11:49:21.588861  105275 cli_runner.go:217] Completed: docker run --rm --entrypoint /usr/bin/tar -v /home/emmanuel/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v18-v1.35.1-docker-overlay2-amd64.tar.lz4:/preloaded.tar:ro -v cyclopousse-ha-m02:/extractDir gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93 -I lz4 -xf /preloaded.tar -C /extractDir: (48.936375898s)
+I0516 11:49:21.588878  105275 kic.go:202] duration metric: took 48.936502518s to extract preloaded images to volume ...
+W0516 11:49:21.588946  105275 cgroups_linux.go:77] Your kernel does not support swap limit capabilities or the cgroup is not mounted.
+W0516 11:49:21.588969  105275 oci.go:251] Your kernel does not support CPU cfs period/quota or the cgroup is not mounted.
+I0516 11:49:21.589009  105275 cli_runner.go:164] Run: docker info --format "'{{json .SecurityOptions}}'"
+I0516 11:49:21.765903  105275 cli_runner.go:164] Run: docker run -d -t --privileged --security-opt seccomp=unconfined --tmpfs /tmp --tmpfs /run -v /lib/modules:/lib/modules:ro --hostname cyclopousse-ha-m02 --name cyclopousse-ha-m02 --label created_by.minikube.sigs.k8s.io=true --label name.minikube.sigs.k8s.io=cyclopousse-ha-m02 --label role.minikube.sigs.k8s.io= --label mode.minikube.sigs.k8s.io=cyclopousse-ha-m02 --network cyclopousse-ha --ip 192.168.49.3 --volume cyclopousse-ha-m02:/var --security-opt apparmor=unconfined --memory=2800mb -e container=docker --expose 8443 --publish=127.0.0.1::8443 --publish=127.0.0.1::22 --publish=127.0.0.1::2376 --publish=127.0.0.1::5000 --publish=127.0.0.1::32443 gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93
+I0516 11:49:28.792288  105275 cli_runner.go:217] Completed: docker run -d -t --privileged --security-opt seccomp=unconfined --tmpfs /tmp --tmpfs /run -v /lib/modules:/lib/modules:ro --hostname cyclopousse-ha-m02 --name cyclopousse-ha-m02 --label created_by.minikube.sigs.k8s.io=true --label name.minikube.sigs.k8s.io=cyclopousse-ha-m02 --label role.minikube.sigs.k8s.io= --label mode.minikube.sigs.k8s.io=cyclopousse-ha-m02 --network cyclopousse-ha --ip 192.168.49.3 --volume cyclopousse-ha-m02:/var --security-opt apparmor=unconfined --memory=2800mb -e container=docker --expose 8443 --publish=127.0.0.1::8443 --publish=127.0.0.1::22 --publish=127.0.0.1::2376 --publish=127.0.0.1::5000 --publish=127.0.0.1::32443 gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93: (7.026340319s)
+I0516 11:49:28.792371  105275 cli_runner.go:164] Run: docker container inspect cyclopousse-ha-m02 --format={{.State.Running}}
+I0516 11:49:28.879305  105275 cli_runner.go:164] Run: docker container inspect cyclopousse-ha-m02 --format={{.State.Status}}
+I0516 11:49:28.904300  105275 cli_runner.go:164] Run: docker exec cyclopousse-ha-m02 stat /var/lib/dpkg/alternatives/iptables
+I0516 11:49:29.160122  105275 oci.go:143] the created container "cyclopousse-ha-m02" has a running status.
+I0516 11:49:29.160141  105275 kic.go:224] Creating ssh key for kic: /home/emmanuel/.minikube/machines/cyclopousse-ha-m02/id_rsa...
+I0516 11:49:29.318214  105275 kic_runner.go:190] docker (temp): /home/emmanuel/.minikube/machines/cyclopousse-ha-m02/id_rsa.pub --> /home/docker/.ssh/authorized_keys (381 bytes)
+I0516 11:49:29.817047  105275 cli_runner.go:164] Run: docker container inspect cyclopousse-ha-m02 --format={{.State.Status}}
+I0516 11:49:29.844905  105275 kic_runner.go:92] Run: chown docker:docker /home/docker/.ssh/authorized_keys
+I0516 11:49:29.844913  105275 kic_runner.go:113] Args: [docker exec --privileged cyclopousse-ha-m02 chown docker:docker /home/docker/.ssh/authorized_keys]
+I0516 11:49:30.011313  105275 cli_runner.go:164] Run: docker container inspect cyclopousse-ha-m02 --format={{.State.Status}}
+I0516 11:49:30.035749  105275 machine.go:96] provisionDockerMachine start ...
+I0516 11:49:30.035824  105275 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" cyclopousse-ha-m02
+I0516 11:49:30.060032  105275 main.go:144] libmachine: Using SSH client type: native
+I0516 11:49:30.060276  105275 main.go:144] libmachine: &{{{<nil> 0 [] [] []} docker [0x906360] 0x909000 <nil>  [] 0s} 127.0.0.1 32792 <nil> <nil>}
+I0516 11:49:30.060281  105275 main.go:144] libmachine: About to run SSH command:
+hostname
+I0516 11:49:30.060834  105275 main.go:144] libmachine: Error dialing TCP: ssh: handshake failed: read tcp 127.0.0.1:57082->127.0.0.1:32792: read: connection reset by peer
+I0516 11:49:33.062452  105275 main.go:144] libmachine: Error dialing TCP: ssh: handshake failed: read tcp 127.0.0.1:57088->127.0.0.1:32792: read: connection reset by peer
+I0516 11:49:36.063231  105275 main.go:144] libmachine: Error dialing TCP: ssh: handshake failed: read tcp 127.0.0.1:55840->127.0.0.1:32792: read: connection reset by peer
+I0516 11:49:39.064450  105275 main.go:144] libmachine: Error dialing TCP: ssh: handshake failed: read tcp 127.0.0.1:55846->127.0.0.1:32792: read: connection reset by peer
+I0516 11:49:42.065729  105275 main.go:144] libmachine: Error dialing TCP: ssh: handshake failed: read tcp 127.0.0.1:55854->127.0.0.1:32792: read: connection reset by peer
+I0516 11:49:45.067888  105275 main.go:144] libmachine: Error dialing TCP: ssh: handshake failed: read tcp 127.0.0.1:55856->127.0.0.1:32792: read: connection reset by peer
+I0516 11:49:48.068953  105275 main.go:144] libmachine: Error dialing TCP: ssh: handshake failed: read tcp 127.0.0.1:51192->127.0.0.1:32792: read: connection reset by peer
+I0516 11:49:54.352089  105275 main.go:144] libmachine: SSH cmd err, output: <nil>: cyclopousse-ha-m02
+
+I0516 11:49:54.352105  105275 ubuntu.go:182] provisioning hostname "cyclopousse-ha-m02"
+I0516 11:49:54.352189  105275 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" cyclopousse-ha-m02
+I0516 11:49:54.652777  105275 main.go:144] libmachine: Using SSH client type: native
+I0516 11:49:54.653038  105275 main.go:144] libmachine: &{{{<nil> 0 [] [] []} docker [0x906360] 0x909000 <nil>  [] 0s} 127.0.0.1 32792 <nil> <nil>}
+I0516 11:49:54.653047  105275 main.go:144] libmachine: About to run SSH command:
+sudo hostname cyclopousse-ha-m02 && echo "cyclopousse-ha-m02" | sudo tee /etc/hostname
+I0516 11:49:57.267925  105275 main.go:144] libmachine: SSH cmd err, output: <nil>: cyclopousse-ha-m02
+
+I0516 11:49:57.268006  105275 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" cyclopousse-ha-m02
+I0516 11:49:57.292344  105275 main.go:144] libmachine: Using SSH client type: native
+I0516 11:49:57.292577  105275 main.go:144] libmachine: &{{{<nil> 0 [] [] []} docker [0x906360] 0x909000 <nil>  [] 0s} 127.0.0.1 32792 <nil> <nil>}
+I0516 11:49:57.292608  105275 main.go:144] libmachine: About to run SSH command:
+
+		if ! grep -xq '.*\scyclopousse-ha-m02' /etc/hosts; then
+			if grep -xq '127.0.1.1\s.*' /etc/hosts; then
+				sudo sed -i 's/^127.0.1.1\s.*/127.0.1.1 cyclopousse-ha-m02/g' /etc/hosts;
+			else 
+				echo '127.0.1.1 cyclopousse-ha-m02' | sudo tee -a /etc/hosts; 
+			fi
+		fi
+I0516 11:49:57.428499  105275 main.go:144] libmachine: SSH cmd err, output: <nil>: 
+I0516 11:49:57.428518  105275 ubuntu.go:188] set auth options {CertDir:/home/emmanuel/.minikube CaCertPath:/home/emmanuel/.minikube/certs/ca.pem CaPrivateKeyPath:/home/emmanuel/.minikube/certs/ca-key.pem CaCertRemotePath:/etc/docker/ca.pem ServerCertPath:/home/emmanuel/.minikube/machines/server.pem ServerKeyPath:/home/emmanuel/.minikube/machines/server-key.pem ClientKeyPath:/home/emmanuel/.minikube/certs/key.pem ServerCertRemotePath:/etc/docker/server.pem ServerKeyRemotePath:/etc/docker/server-key.pem ClientCertPath:/home/emmanuel/.minikube/certs/cert.pem ServerCertSANs:[] StorePath:/home/emmanuel/.minikube}
+I0516 11:49:57.428539  105275 ubuntu.go:190] setting up certificates
+I0516 11:49:57.428556  105275 provision.go:83] configureAuth start
+I0516 11:49:57.428638  105275 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" cyclopousse-ha-m02
+I0516 11:49:57.457713  105275 provision.go:142] copyHostCerts
+I0516 11:49:57.457757  105275 exec_runner.go:143] found /home/emmanuel/.minikube/ca.pem, removing ...
+I0516 11:49:57.457763  105275 exec_runner.go:202] rm: /home/emmanuel/.minikube/ca.pem
+I0516 11:49:57.457822  105275 exec_runner.go:150] cp: /home/emmanuel/.minikube/certs/ca.pem --> /home/emmanuel/.minikube/ca.pem (1082 bytes)
+I0516 11:49:57.457911  105275 exec_runner.go:143] found /home/emmanuel/.minikube/cert.pem, removing ...
+I0516 11:49:57.457915  105275 exec_runner.go:202] rm: /home/emmanuel/.minikube/cert.pem
+I0516 11:49:57.457942  105275 exec_runner.go:150] cp: /home/emmanuel/.minikube/certs/cert.pem --> /home/emmanuel/.minikube/cert.pem (1127 bytes)
+I0516 11:49:57.458018  105275 exec_runner.go:143] found /home/emmanuel/.minikube/key.pem, removing ...
+I0516 11:49:57.458022  105275 exec_runner.go:202] rm: /home/emmanuel/.minikube/key.pem
+I0516 11:49:57.458051  105275 exec_runner.go:150] cp: /home/emmanuel/.minikube/certs/key.pem --> /home/emmanuel/.minikube/key.pem (1675 bytes)
+I0516 11:49:57.458108  105275 provision.go:116] generating server cert: /home/emmanuel/.minikube/machines/server.pem ca-key=/home/emmanuel/.minikube/certs/ca.pem private-key=/home/emmanuel/.minikube/certs/ca-key.pem org=emmanuel.cyclopousse-ha-m02 san=[127.0.0.1 192.168.49.3 cyclopousse-ha-m02 localhost minikube]
+I0516 11:49:57.511658  105275 provision.go:176] copyRemoteCerts
+I0516 11:49:57.511706  105275 ssh_runner.go:194] Run: sudo mkdir -p /etc/docker /etc/docker /etc/docker
+I0516 11:49:57.511743  105275 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" cyclopousse-ha-m02
+I0516 11:49:57.539740  105275 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:32792 SSHKeyPath:/home/emmanuel/.minikube/machines/cyclopousse-ha-m02/id_rsa Username:docker}
+I0516 11:49:57.638649  105275 ssh_runner.go:361] scp /home/emmanuel/.minikube/certs/ca.pem --> /etc/docker/ca.pem (1082 bytes)
+I0516 11:49:58.035585  105275 ssh_runner.go:361] scp /home/emmanuel/.minikube/machines/server.pem --> /etc/docker/server.pem (1224 bytes)
+I0516 11:49:58.056673  105275 ssh_runner.go:361] scp /home/emmanuel/.minikube/machines/server-key.pem --> /etc/docker/server-key.pem (1675 bytes)
+I0516 11:49:58.075782  105275 provision.go:86] duration metric: took 647.210563ms to configureAuth
+I0516 11:49:58.075803  105275 ubuntu.go:206] setting minikube options for container-runtime
+I0516 11:49:58.076081  105275 config.go:183] Loaded profile config "cyclopousse-ha": Driver=docker, ContainerRuntime=docker, KubernetesVersion=v1.35.1
+I0516 11:49:58.076138  105275 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" cyclopousse-ha-m02
+I0516 11:49:58.099701  105275 main.go:144] libmachine: Using SSH client type: native
+I0516 11:49:58.099954  105275 main.go:144] libmachine: &{{{<nil> 0 [] [] []} docker [0x906360] 0x909000 <nil>  [] 0s} 127.0.0.1 32792 <nil> <nil>}
+I0516 11:49:58.099962  105275 main.go:144] libmachine: About to run SSH command:
+df --output=fstype / | tail -n 1
+I0516 11:49:58.293756  105275 main.go:144] libmachine: SSH cmd err, output: <nil>: overlay
+
+I0516 11:49:58.293773  105275 ubuntu.go:71] root file system type: overlay
+I0516 11:49:58.293887  105275 provision.go:313] Updating docker unit: /lib/systemd/system/docker.service ...
+I0516 11:49:58.293947  105275 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" cyclopousse-ha-m02
+I0516 11:49:58.318486  105275 main.go:144] libmachine: Using SSH client type: native
+I0516 11:49:58.318725  105275 main.go:144] libmachine: &{{{<nil> 0 [] [] []} docker [0x906360] 0x909000 <nil>  [] 0s} 127.0.0.1 32792 <nil> <nil>}
+I0516 11:49:58.318802  105275 main.go:144] libmachine: About to run SSH command:
+sudo mkdir -p /lib/systemd/system && printf %s "[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+After=network-online.target nss-lookup.target docker.socket firewalld.service containerd.service time-set.target
+Wants=network-online.target containerd.service
+Requires=docker.socket
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=always
+
+Environment="NO_PROXY=192.168.49.2"
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 \
+	-H fd:// --containerd=/run/containerd/containerd.sock \
+	-H unix:///var/run/docker.sock \
+	--default-ulimit=nofile=1048576:1048576 \
+	--tlsverify \
+	--tlscacert /etc/docker/ca.pem \
+	--tlscert /etc/docker/server.pem \
+	--tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP \$MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+OOMScoreAdjust=-500
+
+[Install]
+WantedBy=multi-user.target
+" | sudo tee /lib/systemd/system/docker.service.new
+I0516 11:49:58.465776  105275 main.go:144] libmachine: SSH cmd err, output: <nil>: [Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+After=network-online.target nss-lookup.target docker.socket firewalld.service containerd.service time-set.target
+Wants=network-online.target containerd.service
+Requires=docker.socket
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=always
+
+Environment=NO_PROXY=192.168.49.2
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 	-H fd:// --containerd=/run/containerd/containerd.sock 	-H unix:///var/run/docker.sock 	--default-ulimit=nofile=1048576:1048576 	--tlsverify 	--tlscacert /etc/docker/ca.pem 	--tlscert /etc/docker/server.pem 	--tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP $MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+OOMScoreAdjust=-500
+
+[Install]
+WantedBy=multi-user.target
+
+I0516 11:49:58.465836  105275 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" cyclopousse-ha-m02
+I0516 11:49:58.489766  105275 main.go:144] libmachine: Using SSH client type: native
+I0516 11:49:58.490016  105275 main.go:144] libmachine: &{{{<nil> 0 [] [] []} docker [0x906360] 0x909000 <nil>  [] 0s} 127.0.0.1 32792 <nil> <nil>}
+I0516 11:49:58.490035  105275 main.go:144] libmachine: About to run SSH command:
+sudo diff -u /lib/systemd/system/docker.service /lib/systemd/system/docker.service.new || { sudo mv /lib/systemd/system/docker.service.new /lib/systemd/system/docker.service; sudo systemctl -f daemon-reload && sudo systemctl -f enable docker && sudo systemctl -f restart docker; }
+I0516 11:50:05.121946  105275 main.go:144] libmachine: SSH cmd err, output: <nil>: --- /lib/systemd/system/docker.service	2026-02-02 17:15:49.000000000 +0000
++++ /lib/systemd/system/docker.service.new	2026-05-16 11:49:58.462357754 +0000
+@@ -9,23 +9,35 @@
+ 
+ [Service]
+ Type=notify
+-# the default is not to use systemd for cgroups because the delegate issues still
+-# exists and systemd currently does not support the cgroup feature set required
+-# for containers run by docker
+-ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+-ExecReload=/bin/kill -s HUP $MAINPID
+-TimeoutStartSec=0
+-RestartSec=2
+ Restart=always
+ 
++Environment=NO_PROXY=192.168.49.2
++
++
++# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
++# The base configuration already specifies an 'ExecStart=...' command. The first directive
++# here is to clear out that command inherited from the base configuration. Without this,
++# the command from the base configuration and the command specified here are treated as
++# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
++# will catch this invalid input and refuse to start the service with an error like:
++#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
++
++# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
++# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
++ExecStart=
++ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 	-H fd:// --containerd=/run/containerd/containerd.sock 	-H unix:///var/run/docker.sock 	--default-ulimit=nofile=1048576:1048576 	--tlsverify 	--tlscacert /etc/docker/ca.pem 	--tlscert /etc/docker/server.pem 	--tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12 
++ExecReload=/bin/kill -s HUP $MAINPID
++
+ # Having non-zero Limit*s causes performance problems due to accounting overhead
+ # in the kernel. We recommend using cgroups to do container-local accounting.
++LimitNOFILE=infinity
+ LimitNPROC=infinity
+ LimitCORE=infinity
+ 
+-# Comment TasksMax if your systemd version does not support it.
+-# Only systemd 226 and above support this option.
++# Uncomment TasksMax if your systemd version supports it.
++# Only systemd 226 and above support this version.
+ TasksMax=infinity
++TimeoutStartSec=0
+ 
+ # set delegate yes so that systemd does not reset the cgroups of docker containers
+ Delegate=yes
+Synchronizing state of docker.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable docker
+
+I0516 11:50:05.121960  105275 machine.go:99] duration metric: took 35.086201845s to provisionDockerMachine
+I0516 11:50:05.121979  105275 client.go:176] duration metric: took 1m45.249397216s to LocalClient.Create
+I0516 11:50:05.121999  105275 start.go:166] duration metric: took 1m45.24953331s to libmachine.API.Create "cyclopousse-ha"
+I0516 11:50:05.122009  105275 start.go:292] postStartSetup for "cyclopousse-ha-m02" (driver="docker")
+I0516 11:50:05.122026  105275 start.go:321] creating required directories: [/etc/kubernetes/addons /etc/kubernetes/manifests /var/tmp/minikube /var/lib/minikube /var/lib/minikube/certs /var/lib/minikube/images /var/lib/minikube/binaries /tmp/gvisor /usr/share/ca-certificates /etc/ssl/certs]
+I0516 11:50:05.122116  105275 ssh_runner.go:194] Run: sudo mkdir -p /etc/kubernetes/addons /etc/kubernetes/manifests /var/tmp/minikube /var/lib/minikube /var/lib/minikube/certs /var/lib/minikube/images /var/lib/minikube/binaries /tmp/gvisor /usr/share/ca-certificates /etc/ssl/certs
+I0516 11:50:05.122177  105275 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" cyclopousse-ha-m02
+I0516 11:50:05.147784  105275 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:32792 SSHKeyPath:/home/emmanuel/.minikube/machines/cyclopousse-ha-m02/id_rsa Username:docker}
+I0516 11:50:05.248367  105275 ssh_runner.go:194] Run: cat /etc/os-release
+I0516 11:50:05.252666  105275 main.go:144] libmachine: Couldn't set key VERSION_CODENAME, no corresponding struct field found
+I0516 11:50:05.252689  105275 info.go:137] Remote host: Debian GNU/Linux 12 (bookworm)
+I0516 11:50:05.252698  105275 filesync.go:125] Scanning /home/emmanuel/.minikube/addons for local assets ...
+I0516 11:50:05.252742  105275 filesync.go:125] Scanning /home/emmanuel/.minikube/files for local assets ...
+I0516 11:50:05.252760  105275 start.go:295] duration metric: took 130.745719ms for postStartSetup
+I0516 11:50:05.253035  105275 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" cyclopousse-ha-m02
+I0516 11:50:05.276484  105275 profile.go:143] Saving config to /home/emmanuel/.minikube/profiles/cyclopousse-ha/config.json ...
+I0516 11:50:05.276724  105275 ssh_runner.go:194] Run: sh -c "df -h /var | awk 'NR==2{print $5}'"
+I0516 11:50:05.276759  105275 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" cyclopousse-ha-m02
+I0516 11:50:05.300424  105275 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:32792 SSHKeyPath:/home/emmanuel/.minikube/machines/cyclopousse-ha-m02/id_rsa Username:docker}
+I0516 11:50:05.408993  105275 ssh_runner.go:194] Run: sh -c "df -BG /var | awk 'NR==2{print $4}'"
+I0516 11:50:05.414311  105275 start.go:127] duration metric: took 1m45.68424878s to createHost
+I0516 11:50:05.414330  105275 start.go:82] releasing machines lock for "cyclopousse-ha-m02", held for 1m45.684327668s
+I0516 11:50:05.414400  105275 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" cyclopousse-ha-m02
+I0516 11:50:05.776023  105275 out.go:179] 🌐  Options de réseau trouvées :
+I0516 11:50:05.865124  105275 out.go:179]     ▪ NO_PROXY=192.168.49.2
+W0516 11:50:05.909508  105275 proxy.go:121] fail to check proxy env: Error ip not in block
+W0516 11:50:05.909526  105275 proxy.go:121] fail to check proxy env: Error ip not in block
+I0516 11:50:05.909612  105275 ssh_runner.go:194] Run: sh -c "stat /etc/cni/net.d/*loopback.conf*"
+I0516 11:50:05.909660  105275 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" cyclopousse-ha-m02
+I0516 11:50:05.909667  105275 ssh_runner.go:194] Run: curl -sS -m 2 https://registry.k8s.io/
+I0516 11:50:05.909729  105275 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" cyclopousse-ha-m02
+I0516 11:50:05.935550  105275 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:32792 SSHKeyPath:/home/emmanuel/.minikube/machines/cyclopousse-ha-m02/id_rsa Username:docker}
+I0516 11:50:05.959929  105275 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:32792 SSHKeyPath:/home/emmanuel/.minikube/machines/cyclopousse-ha-m02/id_rsa Username:docker}
+W0516 11:50:06.036262  105275 cni.go:208] loopback cni configuration skipped: "/etc/cni/net.d/*loopback.conf*" not found
+I0516 11:50:06.036316  105275 ssh_runner.go:194] Run: sudo find /etc/cni/net.d -maxdepth 1 -type f ( ( -name *bridge* -or -name *podman* ) -and -not -name *.mk_disabled ) -printf "%p, " -exec sh -c "sudo mv {} {}.mk_disabled" ;
+I0516 11:50:09.677020  105275 ssh_runner.go:234] Completed: curl -sS -m 2 https://registry.k8s.io/: (3.767293222s)
+I0516 11:50:09.677111  105275 ssh_runner.go:234] Completed: sudo find /etc/cni/net.d -maxdepth 1 -type f ( ( -name *bridge* -or -name *podman* ) -and -not -name *.mk_disabled ) -printf "%p, " -exec sh -c "sudo mv {} {}.mk_disabled" ;: (3.640732499s)
+I0516 11:50:09.677156  105275 cni.go:261] disabled [/etc/cni/net.d/10-crio-bridge.conflist.disabled, /etc/cni/net.d/87-podman-bridge.conflist] bridge cni config(s)
+I0516 11:50:09.677180  105275 start.go:497] detecting cgroup driver to use...
+I0516 11:50:09.677267  105275 detect.go:178] detected "systemd" cgroup driver on host os
+I0516 11:50:09.677518  105275 ssh_runner.go:194] Run: /bin/bash -c "sudo mkdir -p /etc && printf %s "runtime-endpoint: unix:///run/containerd/containerd.sock
+" | sudo tee /etc/crictl.yaml"
+I0516 11:50:09.696002  105275 ssh_runner.go:194] Run: sh -c "sudo sed -i -r 's|^( *)sandbox_image = .*$|\1sandbox_image = "registry.k8s.io/pause:3.10.1"|' /etc/containerd/config.toml"
+I0516 11:50:09.705198  105275 ssh_runner.go:194] Run: sh -c "sudo sed -i -r 's|^( *)restrict_oom_score_adj = .*$|\1restrict_oom_score_adj = false|' /etc/containerd/config.toml"
+I0516 11:50:09.714342  105275 containerd.go:146] configuring containerd to use "systemd" as cgroup driver...
+I0516 11:50:09.714404  105275 ssh_runner.go:194] Run: sh -c "sudo sed -i -r 's|^( *)SystemdCgroup = .*$|\1SystemdCgroup = true|g' /etc/containerd/config.toml"
+I0516 11:50:09.854184  105275 ssh_runner.go:194] Run: sh -c "sudo sed -i 's|"io.containerd.runtime.v1.linux"|"io.containerd.runc.v2"|g' /etc/containerd/config.toml"
+I0516 11:50:09.865608  105275 ssh_runner.go:194] Run: sh -c "sudo sed -i '/systemd_cgroup/d' /etc/containerd/config.toml"
+I0516 11:50:09.912274  105275 ssh_runner.go:194] Run: sh -c "sudo sed -i 's|"io.containerd.runc.v1"|"io.containerd.runc.v2"|g' /etc/containerd/config.toml"
+I0516 11:50:09.921350  105275 ssh_runner.go:194] Run: sh -c "sudo rm -rf /etc/cni/net.mk"
+I0516 11:50:09.929997  105275 ssh_runner.go:194] Run: sh -c "sudo sed -i -r 's|^( *)conf_dir = .*$|\1conf_dir = "/etc/cni/net.d"|g' /etc/containerd/config.toml"
+I0516 11:50:10.097727  105275 ssh_runner.go:194] Run: sh -c "sudo sed -i '/^ *enable_unprivileged_ports = .*/d' /etc/containerd/config.toml"
+I0516 11:50:10.107028  105275 ssh_runner.go:194] Run: sh -c "sudo sed -i -r 's|^( *)\[plugins."io.containerd.grpc.v1.cri"\]|&\n\1  enable_unprivileged_ports = true|' /etc/containerd/config.toml"
+I0516 11:50:10.183446  105275 ssh_runner.go:194] Run: sudo sysctl net.bridge.bridge-nf-call-iptables
+I0516 11:50:10.290422  105275 ssh_runner.go:194] Run: sudo sh -c "echo 1 > /proc/sys/net/ipv4/ip_forward"
+I0516 11:50:10.298051  105275 ssh_runner.go:194] Run: sudo systemctl daemon-reload
+I0516 11:50:10.437633  105275 ssh_runner.go:194] Run: sudo systemctl restart containerd
+I0516 11:50:11.335307  105275 start.go:497] detecting cgroup driver to use...
+I0516 11:50:11.335344  105275 detect.go:178] detected "systemd" cgroup driver on host os
+I0516 11:50:11.335412  105275 ssh_runner.go:194] Run: sudo systemctl cat docker.service
+I0516 11:50:11.349832  105275 ssh_runner.go:194] Run: sudo systemctl is-active --quiet service containerd
+I0516 11:50:11.362734  105275 ssh_runner.go:194] Run: sudo systemctl stop -f containerd
+I0516 11:50:11.400873  105275 ssh_runner.go:194] Run: sudo systemctl is-active --quiet service containerd
+I0516 11:50:11.413527  105275 ssh_runner.go:194] Run: sudo systemctl is-active --quiet service crio
+I0516 11:50:11.644949  105275 ssh_runner.go:194] Run: /bin/bash -c "sudo mkdir -p /etc && printf %s "runtime-endpoint: unix:///var/run/cri-dockerd.sock
+" | sudo tee /etc/crictl.yaml"
+I0516 11:50:11.659369  105275 ssh_runner.go:194] Run: which cri-dockerd
+I0516 11:50:11.663256  105275 ssh_runner.go:194] Run: sudo mkdir -p /etc/systemd/system/cri-docker.service.d
+I0516 11:50:11.671203  105275 ssh_runner.go:361] scp memory --> /etc/systemd/system/cri-docker.service.d/10-cni.conf (192 bytes)
+I0516 11:50:11.686364  105275 ssh_runner.go:194] Run: sudo systemctl unmask docker.service
+I0516 11:50:11.953126  105275 ssh_runner.go:194] Run: sudo systemctl enable docker.socket
+I0516 11:50:12.055463  105275 docker.go:577] configuring docker to use "systemd" as cgroup driver...
+I0516 11:50:12.055484  105275 ssh_runner.go:361] scp memory --> /etc/docker/daemon.json (129 bytes)
+I0516 11:50:12.068955  105275 ssh_runner.go:194] Run: sudo systemctl reset-failed docker
+I0516 11:50:12.081773  105275 ssh_runner.go:194] Run: sudo systemctl daemon-reload
+I0516 11:50:12.195744  105275 ssh_runner.go:194] Run: sudo systemctl restart docker
+I0516 11:50:16.335898  105275 ssh_runner.go:234] Completed: sudo systemctl restart docker: (4.140128989s)
+I0516 11:50:16.336007  105275 ssh_runner.go:194] Run: sudo systemctl is-active --quiet service docker
+I0516 11:50:16.349549  105275 ssh_runner.go:194] Run: sudo systemctl is-active --quiet service cri-docker.socket
+I0516 11:50:16.474417  105275 ssh_runner.go:194] Run: sudo systemctl is-active --quiet service cri-docker.service
+I0516 11:50:16.489815  105275 ssh_runner.go:194] Run: sudo systemctl unmask cri-docker.socket
+I0516 11:50:16.710719  105275 ssh_runner.go:194] Run: sudo systemctl enable cri-docker.socket
+I0516 11:50:16.827717  105275 ssh_runner.go:194] Run: sudo systemctl daemon-reload
+I0516 11:50:16.943524  105275 ssh_runner.go:194] Run: sudo systemctl restart cri-docker.socket
+I0516 11:50:16.990505  105275 ssh_runner.go:194] Run: sudo systemctl reset-failed cri-docker.service
+I0516 11:50:17.003788  105275 ssh_runner.go:194] Run: sudo systemctl daemon-reload
+I0516 11:50:17.114528  105275 ssh_runner.go:194] Run: sudo systemctl restart cri-docker.service
+I0516 11:50:21.161338  105275 ssh_runner.go:234] Completed: sudo systemctl restart cri-docker.service: (4.046776345s)
+I0516 11:50:21.161414  105275 ssh_runner.go:194] Run: sudo systemctl is-active --quiet service cri-docker.service
+I0516 11:50:21.174814  105275 start.go:554] Will wait 60s for socket path /var/run/cri-dockerd.sock
+I0516 11:50:21.174888  105275 ssh_runner.go:194] Run: stat /var/run/cri-dockerd.sock
+I0516 11:50:21.178484  105275 start.go:575] Will wait 60s for crictl version
+I0516 11:50:21.178547  105275 ssh_runner.go:194] Run: which crictl
+I0516 11:50:21.181987  105275 ssh_runner.go:194] Run: sudo /usr/local/bin/crictl version
+I0516 11:50:33.207331  105275 ssh_runner.go:234] Completed: sudo /usr/local/bin/crictl version: (12.025324686s)
+I0516 11:50:33.207342  105275 start.go:591] Version:  0.1.0
+RuntimeName:  docker
+RuntimeVersion:  29.2.1
+RuntimeApiVersion:  v1
+I0516 11:50:33.207392  105275 ssh_runner.go:194] Run: docker version --format {{.Server.Version}}
+I0516 11:50:34.119978  105275 ssh_runner.go:194] Run: docker version --format {{.Server.Version}}
+I0516 11:50:34.236108  105275 out.go:252] 🐳  Préparation de Kubernetes v1.35.1 sur Docker 29.2.1...
+I0516 11:50:34.457938  105275 out.go:179]     ▪ env NO_PROXY=192.168.49.2
+I0516 11:50:34.586463  105275 cli_runner.go:164] Run: docker network inspect cyclopousse-ha --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}"
+I0516 11:50:34.686484  105275 ssh_runner.go:194] Run: grep 192.168.49.1	host.minikube.internal$ /etc/hosts
+I0516 11:50:34.909780  105275 ssh_runner.go:194] Run: /bin/bash -c "{ grep -v $'\thost.minikube.internal$' "/etc/hosts"; echo "192.168.49.1	host.minikube.internal"; } > /tmp/h.$$; sudo cp /tmp/h.$$ "/etc/hosts""
+I0516 11:50:35.126544  105275 mustload.go:66] Loading cluster: cyclopousse-ha
+I0516 11:50:35.126769  105275 config.go:183] Loaded profile config "cyclopousse-ha": Driver=docker, ContainerRuntime=docker, KubernetesVersion=v1.35.1
+I0516 11:50:35.127057  105275 cli_runner.go:164] Run: docker container inspect cyclopousse-ha --format={{.State.Status}}
+I0516 11:50:35.150438  105275 host.go:67] Checking if "cyclopousse-ha" exists ...
+I0516 11:50:35.150683  105275 certs.go:67] Setting up /home/emmanuel/.minikube/profiles/cyclopousse-ha for IP: 192.168.49.3
+I0516 11:50:35.150689  105275 certs.go:193] generating shared ca certs ...
+I0516 11:50:35.150699  105275 certs.go:225] acquiring lock for ca certs: {Name:mk8800a85dbf2b48dadfeda0f573a0e96f54f774 Timeout:1m0s Delay:500ms}
+I0516 11:50:35.150789  105275 certs.go:234] skipping valid "minikubeCA" ca cert: /home/emmanuel/.minikube/ca.key
+I0516 11:50:35.150828  105275 certs.go:234] skipping valid "proxyClientCA" ca cert: /home/emmanuel/.minikube/proxy-client-ca.key
+I0516 11:50:35.150906  105275 certs.go:482] found cert: /home/emmanuel/.minikube/certs/ca-key.pem (1675 bytes)
+I0516 11:50:35.150932  105275 certs.go:482] found cert: /home/emmanuel/.minikube/certs/ca.pem (1082 bytes)
+I0516 11:50:35.150954  105275 certs.go:482] found cert: /home/emmanuel/.minikube/certs/cert.pem (1127 bytes)
+I0516 11:50:35.150977  105275 certs.go:482] found cert: /home/emmanuel/.minikube/certs/key.pem (1675 bytes)
+I0516 11:50:35.151019  105275 ssh_runner.go:361] scp /home/emmanuel/.minikube/ca.crt --> /var/lib/minikube/certs/ca.crt (1111 bytes)
+I0516 11:50:35.169516  105275 ssh_runner.go:361] scp /home/emmanuel/.minikube/ca.key --> /var/lib/minikube/certs/ca.key (1679 bytes)
+I0516 11:50:35.187996  105275 ssh_runner.go:361] scp /home/emmanuel/.minikube/proxy-client-ca.crt --> /var/lib/minikube/certs/proxy-client-ca.crt (1119 bytes)
+I0516 11:50:35.207182  105275 ssh_runner.go:361] scp /home/emmanuel/.minikube/proxy-client-ca.key --> /var/lib/minikube/certs/proxy-client-ca.key (1679 bytes)
+I0516 11:50:35.226447  105275 ssh_runner.go:361] scp /home/emmanuel/.minikube/ca.crt --> /usr/share/ca-certificates/minikubeCA.pem (1111 bytes)
+I0516 11:50:35.245483  105275 ssh_runner.go:194] Run: openssl version
+I0516 11:50:35.260452  105275 ssh_runner.go:194] Run: sudo test -s /usr/share/ca-certificates/minikubeCA.pem
+I0516 11:50:35.293716  105275 ssh_runner.go:194] Run: sudo ln -fs /usr/share/ca-certificates/minikubeCA.pem /etc/ssl/certs/minikubeCA.pem
+I0516 11:50:35.301497  105275 ssh_runner.go:194] Run: ls -la /usr/share/ca-certificates/minikubeCA.pem
+I0516 11:50:35.305246  105275 certs.go:526] hashing: -rw-r--r-- 1 root root 1111 Mar 11 11:19 /usr/share/ca-certificates/minikubeCA.pem
+I0516 11:50:35.305297  105275 ssh_runner.go:194] Run: openssl x509 -hash -noout -in /usr/share/ca-certificates/minikubeCA.pem
+I0516 11:50:35.343563  105275 ssh_runner.go:194] Run: sudo test -L /etc/ssl/certs/b5213941.0
+I0516 11:50:35.351162  105275 ssh_runner.go:194] Run: sudo ln -fs /etc/ssl/certs/minikubeCA.pem /etc/ssl/certs/b5213941.0
+I0516 11:50:35.358792  105275 ssh_runner.go:194] Run: stat /var/lib/minikube/certs/apiserver-kubelet-client.crt
+I0516 11:50:35.362390  105275 certs.go:398] 'apiserver-kubelet-client' cert doesn't exist, likely first start: stat /var/lib/minikube/certs/apiserver-kubelet-client.crt: Process exited with status 1
+stdout:
+
+stderr:
+stat: cannot statx '/var/lib/minikube/certs/apiserver-kubelet-client.crt': No such file or directory
+I0516 11:50:35.362415  105275 kubeadm.go:934] updating node {m02 192.168.49.3 8443 v1.35.1 docker false true} ...
+I0516 11:50:35.362480  105275 kubeadm.go:946] kubelet [Unit]
+Wants=docker.socket
+
+[Service]
+ExecStart=
+ExecStart=/var/lib/minikube/binaries/v1.35.1/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --config=/var/lib/kubelet/config.yaml --hostname-override=cyclopousse-ha-m02 --kubeconfig=/etc/kubernetes/kubelet.conf --node-ip=192.168.49.3
+
+[Install]
+ config:
+{KubernetesVersion:v1.35.1 ClusterName:cyclopousse-ha Namespace:default APIServerHAVIP: APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI:}
+I0516 11:50:35.362537  105275 ssh_runner.go:194] Run: sudo ls /var/lib/minikube/binaries/v1.35.1
+I0516 11:50:35.370648  105275 binaries.go:50] Found k8s binaries, skipping transfer
+I0516 11:50:35.370713  105275 ssh_runner.go:194] Run: sudo mkdir -p /etc/systemd/system/kubelet.service.d /lib/systemd/system
+I0516 11:50:35.379326  105275 ssh_runner.go:361] scp memory --> /etc/systemd/system/kubelet.service.d/10-kubeadm.conf (317 bytes)
+I0516 11:50:35.393160  105275 ssh_runner.go:361] scp memory --> /lib/systemd/system/kubelet.service (352 bytes)
+I0516 11:50:35.407355  105275 ssh_runner.go:194] Run: grep 192.168.49.2	control-plane.minikube.internal$ /etc/hosts
+I0516 11:50:35.410948  105275 ssh_runner.go:194] Run: /bin/bash -c "{ grep -v $'\tcontrol-plane.minikube.internal$' "/etc/hosts"; echo "192.168.49.2	control-plane.minikube.internal"; } > /tmp/h.$$; sudo cp /tmp/h.$$ "/etc/hosts""
+I0516 11:50:35.422802  105275 ssh_runner.go:194] Run: sudo systemctl daemon-reload
+I0516 11:50:35.537049  105275 ssh_runner.go:194] Run: sudo systemctl start kubelet
+I0516 11:50:35.574584  105275 host.go:67] Checking if "cyclopousse-ha" exists ...
+I0516 11:50:35.574792  105275 start.go:319] joinCluster: &{Name:cyclopousse-ha KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93 Memory:2800 CPUs:2 DiskSize:20000 Driver:docker HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:8443 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.35.1 ClusterName:cyclopousse-ha Namespace:default APIServerHAVIP: APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI:} Nodes:[{Name: IP:192.168.49.2 Port:8443 KubernetesVersion:v1.35.1 ContainerRuntime:docker ControlPlane:true Worker:true} {Name:m02 IP:192.168.49.3 Port:8443 KubernetesVersion:v1.35.1 ContainerRuntime:docker ControlPlane:false Worker:true}] Addons:map[default-storageclass:true storage-provisioner:true] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:true ExtraDisks:0 CertExpiration:26280h0m0s MountString: Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false DisableCoreDNSLog:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP: SSHAuthSock: SSHAgentPID:0 GPUs: AutoPauseInterval:1m0s Rosetta:false}
+I0516 11:50:35.574881  105275 ssh_runner.go:194] Run: sudo /bin/bash -c "env PATH="/var/lib/minikube/binaries/v1.35.1:$PATH" kubeadm token create --print-join-command --ttl=0"
+I0516 11:50:35.574924  105275 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" cyclopousse-ha
+I0516 11:50:35.598856  105275 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:32787 SSHKeyPath:/home/emmanuel/.minikube/machines/cyclopousse-ha/id_rsa Username:docker}
+I0516 11:50:39.423990  105275 ssh_runner.go:234] Completed: sudo /bin/bash -c "env PATH="/var/lib/minikube/binaries/v1.35.1:$PATH" kubeadm token create --print-join-command --ttl=0": (3.849086299s)
+I0516 11:50:39.424030  105275 start.go:345] trying to join worker node "m02" to cluster: &{Name:m02 IP:192.168.49.3 Port:8443 KubernetesVersion:v1.35.1 ContainerRuntime:docker ControlPlane:false Worker:true}
+I0516 11:50:39.424092  105275 ssh_runner.go:194] Run: sudo /bin/bash -c "env PATH="/var/lib/minikube/binaries/v1.35.1:$PATH" kubeadm join control-plane.minikube.internal:8443 --token 8sj0nh.eexuomxlbf7rq5g0 --discovery-token-ca-cert-hash sha256:5a1cbb5227eb8f7d3fc82267392e310effe24c83678398ce708d3cdd7e8f86ff --ignore-preflight-errors=all --cri-socket unix:///var/run/cri-dockerd.sock --node-name=cyclopousse-ha-m02"
+I0516 11:50:55.438024  105275 ssh_runner.go:234] Completed: sudo /bin/bash -c "env PATH="/var/lib/minikube/binaries/v1.35.1:$PATH" kubeadm join control-plane.minikube.internal:8443 --token 8sj0nh.eexuomxlbf7rq5g0 --discovery-token-ca-cert-hash sha256:5a1cbb5227eb8f7d3fc82267392e310effe24c83678398ce708d3cdd7e8f86ff --ignore-preflight-errors=all --cri-socket unix:///var/run/cri-dockerd.sock --node-name=cyclopousse-ha-m02": (16.013911104s)
+I0516 11:50:55.438081  105275 ssh_runner.go:194] Run: sudo /bin/bash -c "systemctl daemon-reload && systemctl enable kubelet && systemctl start kubelet"
+I0516 11:50:55.679485  105275 ssh_runner.go:194] Run: sudo /var/lib/minikube/binaries/v1.35.1/kubectl --kubeconfig=/var/lib/minikube/kubeconfig label --overwrite nodes cyclopousse-ha-m02 minikube.k8s.io/updated_at=2026_05_16T11_50_55_0700 minikube.k8s.io/version=v1.38.1 minikube.k8s.io/commit=c93a4cb9311efc66b90d33ea03f75f2c4120e9b0 minikube.k8s.io/name=cyclopousse-ha minikube.k8s.io/primary=false
+I0516 11:50:56.447872  105275 start.go:321] duration metric: took 20.873077561s to joinCluster
+I0516 11:50:56.624633  105275 out.go:203] 
+W0516 11:50:56.815608  105275 out.go:285] ❌  Fermeture en raison de GUEST_START : failed to start node: adding node: join node to cluster: error applying worker node "m02" label: apply node labels: sudo /var/lib/minikube/binaries/v1.35.1/kubectl --kubeconfig=/var/lib/minikube/kubeconfig label --overwrite nodes cyclopousse-ha-m02 minikube.k8s.io/updated_at=2026_05_16T11_50_55_0700 minikube.k8s.io/version=v1.38.1 minikube.k8s.io/commit=c93a4cb9311efc66b90d33ea03f75f2c4120e9b0 minikube.k8s.io/name=cyclopousse-ha minikube.k8s.io/primary=false: Process exited with status 1
+stdout:
+
+stderr:
+Error from server (NotFound): nodes "cyclopousse-ha-m02" not found
+
+W0516 11:50:56.815749  105275 out.go:285] 
+W0516 11:50:56.817557  105275 out.go:308] [31m╭──────────────────────────────────────────────────────────────────────────────────────────────────╮[0m
+[31m│[0m                                                                                                  [31m│[0m
+[31m│[0m    😿  Si les conseils ci-dessus ne vous aident pas, veuillez nous en informer :                 [31m│[0m
+[31m│[0m    👉  https://github.com/kubernetes/minikube/issues/new/choose                                  [31m│[0m
+[31m│[0m                                                                                                  [31m│[0m
+[31m│[0m    Veuillez exécuter `minikube logs --file=logs.txt` et attachez logs.txt au problème GitHub.    [31m│[0m
+[31m│[0m                                                                                                  [31m│[0m
+[31m╰──────────────────────────────────────────────────────────────────────────────────────────────────╯[0m
+I0516 11:50:57.096522  105275 out.go:203] 
+
+
